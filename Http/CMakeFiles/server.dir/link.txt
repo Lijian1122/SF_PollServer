@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/PollServer/libs/libserver.a  CMakeFiles/server.dir/mongoose.c.o CMakeFiles/server.dir/webserver.cpp.o
+/usr/bin/ranlib /home/PollServer/libs/libserver.a

@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/timer.dir/timer.cc.o  -o timer libhandy.a 

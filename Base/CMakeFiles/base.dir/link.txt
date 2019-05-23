@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/PollServer/libs/libbase.a  CMakeFiles/base.dir/BaseList.cpp.o CMakeFiles/base.dir/CommonList.cpp.o CMakeFiles/base.dir/Condition.cpp.o CMakeFiles/base.dir/ConfigFileReader.cpp.o CMakeFiles/base.dir/LibcurClient.cpp.o CMakeFiles/base.dir/Lock.cpp.o CMakeFiles/base.dir/MessageQueue.c.o CMakeFiles/base.dir/common.cpp.o
+/usr/bin/ranlib /home/PollServer/libs/libbase.a

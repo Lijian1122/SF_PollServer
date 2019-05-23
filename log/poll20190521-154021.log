@@ -1,0 +1,12 @@
+Log file created at: 2019/05/21 15:40:21
+Running on machine: live2.sanhai
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0521 15:40:21.080687 12289 pollServer.cpp:335] 已启动web参数管理线程
+I0521 15:40:21.082238 12289 pollServer.cpp:345] 已启动web服务
+I0521 15:40:21.082283 12289 pollServer.cpp:356] 已启动定时器服务
+E0521 15:40:21.082417 12301 webserver.cpp:183] Failed to create listener
+E0521 19:45:45.647338 12290 webserver.cpp:209] http服务线程退出错误  ret:22
+E0521 19:45:45.647475 12290 pollServer.cpp:220] 退出web服务异常  resCode:22
+I0521 19:45:45.647537 12290 pollServer.cpp:222] 已退出web服务
+I0521 19:45:45.648512 12290 pollServer.cpp:232] 已退出web参数管理线程
+I0521 19:45:45.657135 12290 pollServer.cpp:244] 已退出定时器服务停止

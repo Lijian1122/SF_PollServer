@@ -1,0 +1,3 @@
+/home/PollServer/Http/CMakeFiles/rebuild_cache.dir
+/home/PollServer/Http/CMakeFiles/edit_cache.dir
+/home/PollServer/Http/CMakeFiles/server.dir

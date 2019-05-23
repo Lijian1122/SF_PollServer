@@ -1,0 +1,5 @@
+Log file created at: 2019/05/13 10:17:32
+Running on machine: live2.sanhai
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+E0513 10:17:32.621945 22222 webserver.cpp:319] 调用Http API接口失败   main_ret:6
+I0513 10:17:32.622459 22222 webserver.cpp:399] server start error:  main_ret:6

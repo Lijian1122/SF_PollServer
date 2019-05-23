@@ -1,0 +1,3 @@
+/home/PollServer/Record/CMakeFiles/edit_cache.dir
+/home/PollServer/Record/CMakeFiles/rebuild_cache.dir
+/home/PollServer/Record/CMakeFiles/record.dir

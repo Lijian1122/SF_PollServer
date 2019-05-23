@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/PollServer/Base/common.cpp
+common.h
+/home/PollServer/Base/common.h
+string
+-
+
+/home/PollServer/Base/common.h
+stdio.h
+-
+string
+-
+string.h
+-
+dirent.h
+-
+unistd.h
+-
+iostream
+-
+

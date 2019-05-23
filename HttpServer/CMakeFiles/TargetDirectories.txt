@@ -1,0 +1,5 @@
+//home/PollServer/HttpServer/CMakeFiles/rebuild_cache.dir
+//home/PollServer/HttpServer/CMakeFiles/timer.dir
+//home/PollServer/HttpServer/CMakeFiles/edit_cache.dir
+//home/PollServer/HttpServer/CMakeFiles/http-hello.dir
+//home/PollServer/HttpServer/CMakeFiles/handy.dir

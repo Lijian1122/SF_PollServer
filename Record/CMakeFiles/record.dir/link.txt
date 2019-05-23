@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/PollServer/libs/librecord.a  CMakeFiles/record.dir/FlvtoJpeg.cpp.o CMakeFiles/record.dir/ReceiveFlv.cpp.o
+/usr/bin/ranlib /home/PollServer/libs/librecord.a

@@ -1,0 +1,1 @@
+/usr/bin/c++   -O0 -Wall -std=c++11  -fPIC  -Wno-write-strings -g -ggdb  -rdynamic CMakeFiles/timer.dir/timerTest.cc.o  -o timer lib/libmuduo_net.a lib/libmuduo_base.a -lpthread 

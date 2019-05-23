@@ -1,0 +1,3 @@
+/home/PollServer/TimerServer/CMakeFiles/rebuild_cache.dir
+/home/PollServer/TimerServer/CMakeFiles/edit_cache.dir
+/home/PollServer/TimerServer/CMakeFiles/timer.dir
