@@ -48,10 +48,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/PollServer/Http
+CMAKE_SOURCE_DIR = /home/SF_PollServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/PollServer/Http
+CMAKE_BINARY_DIR = /home/SF_PollServer
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/PollServer/Http/CMakeFiles /home/PollServer/Http/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/PollServer/Http/CMakeFiles 0
+	cd /home/SF_PollServer && $(CMAKE_COMMAND) -E cmake_progress_start /home/SF_PollServer/CMakeFiles /home/SF_PollServer/Http/CMakeFiles/progress.marks
+	cd /home/SF_PollServer && $(MAKE) -f CMakeFiles/Makefile2 Http/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/SF_PollServer/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/SF_PollServer && $(MAKE) -f CMakeFiles/Makefile2 Http/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,30 +97,32 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/SF_PollServer && $(MAKE) -f CMakeFiles/Makefile2 Http/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/SF_PollServer && $(MAKE) -f CMakeFiles/Makefile2 Http/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/SF_PollServer && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named server
+# Convenience name for target.
+Http/CMakeFiles/server.dir/rule:
+	cd /home/SF_PollServer && $(MAKE) -f CMakeFiles/Makefile2 Http/CMakeFiles/server.dir/rule
+.PHONY : Http/CMakeFiles/server.dir/rule
 
-# Build rule for target.
-server: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 server
+# Convenience name for target.
+server: Http/CMakeFiles/server.dir/rule
+
 .PHONY : server
 
 # fast build rule for target.
 server/fast:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
+	cd /home/SF_PollServer && $(MAKE) -f Http/CMakeFiles/server.dir/build.make Http/CMakeFiles/server.dir/build
 .PHONY : server/fast
 
 mongoose.o: mongoose.c.o
@@ -129,7 +131,7 @@ mongoose.o: mongoose.c.o
 
 # target to build an object file
 mongoose.c.o:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/mongoose.c.o
+	cd /home/SF_PollServer && $(MAKE) -f Http/CMakeFiles/server.dir/build.make Http/CMakeFiles/server.dir/mongoose.c.o
 .PHONY : mongoose.c.o
 
 mongoose.i: mongoose.c.i
@@ -138,7 +140,7 @@ mongoose.i: mongoose.c.i
 
 # target to preprocess a source file
 mongoose.c.i:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/mongoose.c.i
+	cd /home/SF_PollServer && $(MAKE) -f Http/CMakeFiles/server.dir/build.make Http/CMakeFiles/server.dir/mongoose.c.i
 .PHONY : mongoose.c.i
 
 mongoose.s: mongoose.c.s
@@ -147,7 +149,7 @@ mongoose.s: mongoose.c.s
 
 # target to generate assembly for a file
 mongoose.c.s:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/mongoose.c.s
+	cd /home/SF_PollServer && $(MAKE) -f Http/CMakeFiles/server.dir/build.make Http/CMakeFiles/server.dir/mongoose.c.s
 .PHONY : mongoose.c.s
 
 webserver.o: webserver.cpp.o
@@ -156,7 +158,7 @@ webserver.o: webserver.cpp.o
 
 # target to build an object file
 webserver.cpp.o:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/webserver.cpp.o
+	cd /home/SF_PollServer && $(MAKE) -f Http/CMakeFiles/server.dir/build.make Http/CMakeFiles/server.dir/webserver.cpp.o
 .PHONY : webserver.cpp.o
 
 webserver.i: webserver.cpp.i
@@ -165,7 +167,7 @@ webserver.i: webserver.cpp.i
 
 # target to preprocess a source file
 webserver.cpp.i:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/webserver.cpp.i
+	cd /home/SF_PollServer && $(MAKE) -f Http/CMakeFiles/server.dir/build.make Http/CMakeFiles/server.dir/webserver.cpp.i
 .PHONY : webserver.cpp.i
 
 webserver.s: webserver.cpp.s
@@ -174,7 +176,7 @@ webserver.s: webserver.cpp.s
 
 # target to generate assembly for a file
 webserver.cpp.s:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/webserver.cpp.s
+	cd /home/SF_PollServer && $(MAKE) -f Http/CMakeFiles/server.dir/build.make Http/CMakeFiles/server.dir/webserver.cpp.s
 .PHONY : webserver.cpp.s
 
 # Help Target
@@ -203,6 +205,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/SF_PollServer && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

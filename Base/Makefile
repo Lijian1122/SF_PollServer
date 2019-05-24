@@ -48,10 +48,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/PollServer/Base
+CMAKE_SOURCE_DIR = /home/SF_PollServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/PollServer/Base
+CMAKE_BINARY_DIR = /home/SF_PollServer
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/PollServer/Base/CMakeFiles /home/PollServer/Base/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/PollServer/Base/CMakeFiles 0
+	cd /home/SF_PollServer && $(CMAKE_COMMAND) -E cmake_progress_start /home/SF_PollServer/CMakeFiles /home/SF_PollServer/Base/CMakeFiles/progress.marks
+	cd /home/SF_PollServer && $(MAKE) -f CMakeFiles/Makefile2 Base/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/SF_PollServer/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/SF_PollServer && $(MAKE) -f CMakeFiles/Makefile2 Base/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,30 +97,32 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/SF_PollServer && $(MAKE) -f CMakeFiles/Makefile2 Base/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/SF_PollServer && $(MAKE) -f CMakeFiles/Makefile2 Base/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/SF_PollServer && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named base
+# Convenience name for target.
+Base/CMakeFiles/base.dir/rule:
+	cd /home/SF_PollServer && $(MAKE) -f CMakeFiles/Makefile2 Base/CMakeFiles/base.dir/rule
+.PHONY : Base/CMakeFiles/base.dir/rule
 
-# Build rule for target.
-base: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 base
+# Convenience name for target.
+base: Base/CMakeFiles/base.dir/rule
+
 .PHONY : base
 
 # fast build rule for target.
 base/fast:
-	$(MAKE) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/build
+	cd /home/SF_PollServer && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/build
 .PHONY : base/fast
 
 BaseList.o: BaseList.cpp.o
@@ -129,7 +131,7 @@ BaseList.o: BaseList.cpp.o
 
 # target to build an object file
 BaseList.cpp.o:
-	$(MAKE) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/BaseList.cpp.o
+	cd /home/SF_PollServer && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/BaseList.cpp.o
 .PHONY : BaseList.cpp.o
 
 BaseList.i: BaseList.cpp.i
@@ -138,7 +140,7 @@ BaseList.i: BaseList.cpp.i
 
 # target to preprocess a source file
 BaseList.cpp.i:
-	$(MAKE) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/BaseList.cpp.i
+	cd /home/SF_PollServer && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/BaseList.cpp.i
 .PHONY : BaseList.cpp.i
 
 BaseList.s: BaseList.cpp.s
@@ -147,7 +149,7 @@ BaseList.s: BaseList.cpp.s
 
 # target to generate assembly for a file
 BaseList.cpp.s:
-	$(MAKE) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/BaseList.cpp.s
+	cd /home/SF_PollServer && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/BaseList.cpp.s
 .PHONY : BaseList.cpp.s
 
 CommonList.o: CommonList.cpp.o
@@ -156,7 +158,7 @@ CommonList.o: CommonList.cpp.o
 
 # target to build an object file
 CommonList.cpp.o:
-	$(MAKE) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/CommonList.cpp.o
+	cd /home/SF_PollServer && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/CommonList.cpp.o
 .PHONY : CommonList.cpp.o
 
 CommonList.i: CommonList.cpp.i
@@ -165,7 +167,7 @@ CommonList.i: CommonList.cpp.i
 
 # target to preprocess a source file
 CommonList.cpp.i:
-	$(MAKE) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/CommonList.cpp.i
+	cd /home/SF_PollServer && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/CommonList.cpp.i
 .PHONY : CommonList.cpp.i
 
 CommonList.s: CommonList.cpp.s
@@ -174,7 +176,7 @@ CommonList.s: CommonList.cpp.s
 
 # target to generate assembly for a file
 CommonList.cpp.s:
-	$(MAKE) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/CommonList.cpp.s
+	cd /home/SF_PollServer && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/CommonList.cpp.s
 .PHONY : CommonList.cpp.s
 
 Condition.o: Condition.cpp.o
@@ -183,7 +185,7 @@ Condition.o: Condition.cpp.o
 
 # target to build an object file
 Condition.cpp.o:
-	$(MAKE) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/Condition.cpp.o
+	cd /home/SF_PollServer && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/Condition.cpp.o
 .PHONY : Condition.cpp.o
 
 Condition.i: Condition.cpp.i
@@ -192,7 +194,7 @@ Condition.i: Condition.cpp.i
 
 # target to preprocess a source file
 Condition.cpp.i:
-	$(MAKE) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/Condition.cpp.i
+	cd /home/SF_PollServer && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/Condition.cpp.i
 .PHONY : Condition.cpp.i
 
 Condition.s: Condition.cpp.s
@@ -201,7 +203,7 @@ Condition.s: Condition.cpp.s
 
 # target to generate assembly for a file
 Condition.cpp.s:
-	$(MAKE) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/Condition.cpp.s
+	cd /home/SF_PollServer && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/Condition.cpp.s
 .PHONY : Condition.cpp.s
 
 ConfigFileReader.o: ConfigFileReader.cpp.o
@@ -210,7 +212,7 @@ ConfigFileReader.o: ConfigFileReader.cpp.o
 
 # target to build an object file
 ConfigFileReader.cpp.o:
-	$(MAKE) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/ConfigFileReader.cpp.o
+	cd /home/SF_PollServer && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/ConfigFileReader.cpp.o
 .PHONY : ConfigFileReader.cpp.o
 
 ConfigFileReader.i: ConfigFileReader.cpp.i
@@ -219,7 +221,7 @@ ConfigFileReader.i: ConfigFileReader.cpp.i
 
 # target to preprocess a source file
 ConfigFileReader.cpp.i:
-	$(MAKE) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/ConfigFileReader.cpp.i
+	cd /home/SF_PollServer && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/ConfigFileReader.cpp.i
 .PHONY : ConfigFileReader.cpp.i
 
 ConfigFileReader.s: ConfigFileReader.cpp.s
@@ -228,7 +230,7 @@ ConfigFileReader.s: ConfigFileReader.cpp.s
 
 # target to generate assembly for a file
 ConfigFileReader.cpp.s:
-	$(MAKE) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/ConfigFileReader.cpp.s
+	cd /home/SF_PollServer && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/ConfigFileReader.cpp.s
 .PHONY : ConfigFileReader.cpp.s
 
 LibcurClient.o: LibcurClient.cpp.o
@@ -237,7 +239,7 @@ LibcurClient.o: LibcurClient.cpp.o
 
 # target to build an object file
 LibcurClient.cpp.o:
-	$(MAKE) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/LibcurClient.cpp.o
+	cd /home/SF_PollServer && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/LibcurClient.cpp.o
 .PHONY : LibcurClient.cpp.o
 
 LibcurClient.i: LibcurClient.cpp.i
@@ -246,7 +248,7 @@ LibcurClient.i: LibcurClient.cpp.i
 
 # target to preprocess a source file
 LibcurClient.cpp.i:
-	$(MAKE) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/LibcurClient.cpp.i
+	cd /home/SF_PollServer && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/LibcurClient.cpp.i
 .PHONY : LibcurClient.cpp.i
 
 LibcurClient.s: LibcurClient.cpp.s
@@ -255,7 +257,7 @@ LibcurClient.s: LibcurClient.cpp.s
 
 # target to generate assembly for a file
 LibcurClient.cpp.s:
-	$(MAKE) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/LibcurClient.cpp.s
+	cd /home/SF_PollServer && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/LibcurClient.cpp.s
 .PHONY : LibcurClient.cpp.s
 
 Lock.o: Lock.cpp.o
@@ -264,7 +266,7 @@ Lock.o: Lock.cpp.o
 
 # target to build an object file
 Lock.cpp.o:
-	$(MAKE) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/Lock.cpp.o
+	cd /home/SF_PollServer && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/Lock.cpp.o
 .PHONY : Lock.cpp.o
 
 Lock.i: Lock.cpp.i
@@ -273,7 +275,7 @@ Lock.i: Lock.cpp.i
 
 # target to preprocess a source file
 Lock.cpp.i:
-	$(MAKE) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/Lock.cpp.i
+	cd /home/SF_PollServer && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/Lock.cpp.i
 .PHONY : Lock.cpp.i
 
 Lock.s: Lock.cpp.s
@@ -282,7 +284,7 @@ Lock.s: Lock.cpp.s
 
 # target to generate assembly for a file
 Lock.cpp.s:
-	$(MAKE) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/Lock.cpp.s
+	cd /home/SF_PollServer && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/Lock.cpp.s
 .PHONY : Lock.cpp.s
 
 MessageQueue.o: MessageQueue.c.o
@@ -291,7 +293,7 @@ MessageQueue.o: MessageQueue.c.o
 
 # target to build an object file
 MessageQueue.c.o:
-	$(MAKE) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/MessageQueue.c.o
+	cd /home/SF_PollServer && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/MessageQueue.c.o
 .PHONY : MessageQueue.c.o
 
 MessageQueue.i: MessageQueue.c.i
@@ -300,7 +302,7 @@ MessageQueue.i: MessageQueue.c.i
 
 # target to preprocess a source file
 MessageQueue.c.i:
-	$(MAKE) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/MessageQueue.c.i
+	cd /home/SF_PollServer && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/MessageQueue.c.i
 .PHONY : MessageQueue.c.i
 
 MessageQueue.s: MessageQueue.c.s
@@ -309,7 +311,7 @@ MessageQueue.s: MessageQueue.c.s
 
 # target to generate assembly for a file
 MessageQueue.c.s:
-	$(MAKE) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/MessageQueue.c.s
+	cd /home/SF_PollServer && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/MessageQueue.c.s
 .PHONY : MessageQueue.c.s
 
 common.o: common.cpp.o
@@ -318,7 +320,7 @@ common.o: common.cpp.o
 
 # target to build an object file
 common.cpp.o:
-	$(MAKE) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/common.cpp.o
+	cd /home/SF_PollServer && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/common.cpp.o
 .PHONY : common.cpp.o
 
 common.i: common.cpp.i
@@ -327,7 +329,7 @@ common.i: common.cpp.i
 
 # target to preprocess a source file
 common.cpp.i:
-	$(MAKE) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/common.cpp.i
+	cd /home/SF_PollServer && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/common.cpp.i
 .PHONY : common.cpp.i
 
 common.s: common.cpp.s
@@ -336,7 +338,7 @@ common.s: common.cpp.s
 
 # target to generate assembly for a file
 common.cpp.s:
-	$(MAKE) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/common.cpp.s
+	cd /home/SF_PollServer && $(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/common.cpp.s
 .PHONY : common.cpp.s
 
 # Help Target
@@ -383,6 +385,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/SF_PollServer && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,4 +1,4 @@
-#include <stdio.h>
+/*#include <stdio.h>
 #include <unistd.h>
 #include <assert.h>
 #include <signal.h>
@@ -29,7 +29,9 @@ CommonList *timer_commList;
 bool manageFlag = true;
 string logstr = "./log/";
 pthread_t manage_t;
-ThreadPool pool("PollThreadPool");
+ThreadPool pool("PollThreadPool");*/
+
+#include "pollServer.h"
 
 //打印PID
 void printTid()

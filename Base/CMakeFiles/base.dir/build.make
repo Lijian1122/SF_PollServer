@@ -43,123 +43,123 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/PollServer/Base
+CMAKE_SOURCE_DIR = /home/SF_PollServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/PollServer/Base
+CMAKE_BINARY_DIR = /home/SF_PollServer
 
 # Include any dependencies generated for this target.
-include CMakeFiles/base.dir/depend.make
+include Base/CMakeFiles/base.dir/depend.make
 
 # Include the progress variables for this target.
-include CMakeFiles/base.dir/progress.make
+include Base/CMakeFiles/base.dir/progress.make
 
 # Include the compile flags for this target's objects.
-include CMakeFiles/base.dir/flags.make
+include Base/CMakeFiles/base.dir/flags.make
 
-CMakeFiles/base.dir/BaseList.cpp.o: CMakeFiles/base.dir/flags.make
-CMakeFiles/base.dir/BaseList.cpp.o: BaseList.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/PollServer/Base/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/base.dir/BaseList.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/BaseList.cpp.o -c /home/PollServer/Base/BaseList.cpp
+Base/CMakeFiles/base.dir/BaseList.cpp.o: Base/CMakeFiles/base.dir/flags.make
+Base/CMakeFiles/base.dir/BaseList.cpp.o: Base/BaseList.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/SF_PollServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Base/CMakeFiles/base.dir/BaseList.cpp.o"
+	cd /home/SF_PollServer/Base && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/BaseList.cpp.o -c /home/SF_PollServer/Base/BaseList.cpp
 
-CMakeFiles/base.dir/BaseList.cpp.i: cmake_force
+Base/CMakeFiles/base.dir/BaseList.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/base.dir/BaseList.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/PollServer/Base/BaseList.cpp > CMakeFiles/base.dir/BaseList.cpp.i
+	cd /home/SF_PollServer/Base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/SF_PollServer/Base/BaseList.cpp > CMakeFiles/base.dir/BaseList.cpp.i
 
-CMakeFiles/base.dir/BaseList.cpp.s: cmake_force
+Base/CMakeFiles/base.dir/BaseList.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/base.dir/BaseList.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/PollServer/Base/BaseList.cpp -o CMakeFiles/base.dir/BaseList.cpp.s
+	cd /home/SF_PollServer/Base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/SF_PollServer/Base/BaseList.cpp -o CMakeFiles/base.dir/BaseList.cpp.s
 
-CMakeFiles/base.dir/CommonList.cpp.o: CMakeFiles/base.dir/flags.make
-CMakeFiles/base.dir/CommonList.cpp.o: CommonList.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/PollServer/Base/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/base.dir/CommonList.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/CommonList.cpp.o -c /home/PollServer/Base/CommonList.cpp
+Base/CMakeFiles/base.dir/CommonList.cpp.o: Base/CMakeFiles/base.dir/flags.make
+Base/CMakeFiles/base.dir/CommonList.cpp.o: Base/CommonList.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/SF_PollServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Base/CMakeFiles/base.dir/CommonList.cpp.o"
+	cd /home/SF_PollServer/Base && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/CommonList.cpp.o -c /home/SF_PollServer/Base/CommonList.cpp
 
-CMakeFiles/base.dir/CommonList.cpp.i: cmake_force
+Base/CMakeFiles/base.dir/CommonList.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/base.dir/CommonList.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/PollServer/Base/CommonList.cpp > CMakeFiles/base.dir/CommonList.cpp.i
+	cd /home/SF_PollServer/Base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/SF_PollServer/Base/CommonList.cpp > CMakeFiles/base.dir/CommonList.cpp.i
 
-CMakeFiles/base.dir/CommonList.cpp.s: cmake_force
+Base/CMakeFiles/base.dir/CommonList.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/base.dir/CommonList.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/PollServer/Base/CommonList.cpp -o CMakeFiles/base.dir/CommonList.cpp.s
+	cd /home/SF_PollServer/Base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/SF_PollServer/Base/CommonList.cpp -o CMakeFiles/base.dir/CommonList.cpp.s
 
-CMakeFiles/base.dir/Condition.cpp.o: CMakeFiles/base.dir/flags.make
-CMakeFiles/base.dir/Condition.cpp.o: Condition.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/PollServer/Base/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/base.dir/Condition.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/Condition.cpp.o -c /home/PollServer/Base/Condition.cpp
+Base/CMakeFiles/base.dir/Condition.cpp.o: Base/CMakeFiles/base.dir/flags.make
+Base/CMakeFiles/base.dir/Condition.cpp.o: Base/Condition.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/SF_PollServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Base/CMakeFiles/base.dir/Condition.cpp.o"
+	cd /home/SF_PollServer/Base && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/Condition.cpp.o -c /home/SF_PollServer/Base/Condition.cpp
 
-CMakeFiles/base.dir/Condition.cpp.i: cmake_force
+Base/CMakeFiles/base.dir/Condition.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/base.dir/Condition.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/PollServer/Base/Condition.cpp > CMakeFiles/base.dir/Condition.cpp.i
+	cd /home/SF_PollServer/Base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/SF_PollServer/Base/Condition.cpp > CMakeFiles/base.dir/Condition.cpp.i
 
-CMakeFiles/base.dir/Condition.cpp.s: cmake_force
+Base/CMakeFiles/base.dir/Condition.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/base.dir/Condition.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/PollServer/Base/Condition.cpp -o CMakeFiles/base.dir/Condition.cpp.s
+	cd /home/SF_PollServer/Base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/SF_PollServer/Base/Condition.cpp -o CMakeFiles/base.dir/Condition.cpp.s
 
-CMakeFiles/base.dir/ConfigFileReader.cpp.o: CMakeFiles/base.dir/flags.make
-CMakeFiles/base.dir/ConfigFileReader.cpp.o: ConfigFileReader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/PollServer/Base/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/base.dir/ConfigFileReader.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/ConfigFileReader.cpp.o -c /home/PollServer/Base/ConfigFileReader.cpp
+Base/CMakeFiles/base.dir/ConfigFileReader.cpp.o: Base/CMakeFiles/base.dir/flags.make
+Base/CMakeFiles/base.dir/ConfigFileReader.cpp.o: Base/ConfigFileReader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/SF_PollServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Base/CMakeFiles/base.dir/ConfigFileReader.cpp.o"
+	cd /home/SF_PollServer/Base && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/ConfigFileReader.cpp.o -c /home/SF_PollServer/Base/ConfigFileReader.cpp
 
-CMakeFiles/base.dir/ConfigFileReader.cpp.i: cmake_force
+Base/CMakeFiles/base.dir/ConfigFileReader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/base.dir/ConfigFileReader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/PollServer/Base/ConfigFileReader.cpp > CMakeFiles/base.dir/ConfigFileReader.cpp.i
+	cd /home/SF_PollServer/Base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/SF_PollServer/Base/ConfigFileReader.cpp > CMakeFiles/base.dir/ConfigFileReader.cpp.i
 
-CMakeFiles/base.dir/ConfigFileReader.cpp.s: cmake_force
+Base/CMakeFiles/base.dir/ConfigFileReader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/base.dir/ConfigFileReader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/PollServer/Base/ConfigFileReader.cpp -o CMakeFiles/base.dir/ConfigFileReader.cpp.s
+	cd /home/SF_PollServer/Base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/SF_PollServer/Base/ConfigFileReader.cpp -o CMakeFiles/base.dir/ConfigFileReader.cpp.s
 
-CMakeFiles/base.dir/LibcurClient.cpp.o: CMakeFiles/base.dir/flags.make
-CMakeFiles/base.dir/LibcurClient.cpp.o: LibcurClient.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/PollServer/Base/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/base.dir/LibcurClient.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/LibcurClient.cpp.o -c /home/PollServer/Base/LibcurClient.cpp
+Base/CMakeFiles/base.dir/LibcurClient.cpp.o: Base/CMakeFiles/base.dir/flags.make
+Base/CMakeFiles/base.dir/LibcurClient.cpp.o: Base/LibcurClient.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/SF_PollServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object Base/CMakeFiles/base.dir/LibcurClient.cpp.o"
+	cd /home/SF_PollServer/Base && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/LibcurClient.cpp.o -c /home/SF_PollServer/Base/LibcurClient.cpp
 
-CMakeFiles/base.dir/LibcurClient.cpp.i: cmake_force
+Base/CMakeFiles/base.dir/LibcurClient.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/base.dir/LibcurClient.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/PollServer/Base/LibcurClient.cpp > CMakeFiles/base.dir/LibcurClient.cpp.i
+	cd /home/SF_PollServer/Base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/SF_PollServer/Base/LibcurClient.cpp > CMakeFiles/base.dir/LibcurClient.cpp.i
 
-CMakeFiles/base.dir/LibcurClient.cpp.s: cmake_force
+Base/CMakeFiles/base.dir/LibcurClient.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/base.dir/LibcurClient.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/PollServer/Base/LibcurClient.cpp -o CMakeFiles/base.dir/LibcurClient.cpp.s
+	cd /home/SF_PollServer/Base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/SF_PollServer/Base/LibcurClient.cpp -o CMakeFiles/base.dir/LibcurClient.cpp.s
 
-CMakeFiles/base.dir/Lock.cpp.o: CMakeFiles/base.dir/flags.make
-CMakeFiles/base.dir/Lock.cpp.o: Lock.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/PollServer/Base/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/base.dir/Lock.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/Lock.cpp.o -c /home/PollServer/Base/Lock.cpp
+Base/CMakeFiles/base.dir/Lock.cpp.o: Base/CMakeFiles/base.dir/flags.make
+Base/CMakeFiles/base.dir/Lock.cpp.o: Base/Lock.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/SF_PollServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object Base/CMakeFiles/base.dir/Lock.cpp.o"
+	cd /home/SF_PollServer/Base && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/Lock.cpp.o -c /home/SF_PollServer/Base/Lock.cpp
 
-CMakeFiles/base.dir/Lock.cpp.i: cmake_force
+Base/CMakeFiles/base.dir/Lock.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/base.dir/Lock.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/PollServer/Base/Lock.cpp > CMakeFiles/base.dir/Lock.cpp.i
+	cd /home/SF_PollServer/Base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/SF_PollServer/Base/Lock.cpp > CMakeFiles/base.dir/Lock.cpp.i
 
-CMakeFiles/base.dir/Lock.cpp.s: cmake_force
+Base/CMakeFiles/base.dir/Lock.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/base.dir/Lock.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/PollServer/Base/Lock.cpp -o CMakeFiles/base.dir/Lock.cpp.s
+	cd /home/SF_PollServer/Base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/SF_PollServer/Base/Lock.cpp -o CMakeFiles/base.dir/Lock.cpp.s
 
-CMakeFiles/base.dir/MessageQueue.c.o: CMakeFiles/base.dir/flags.make
-CMakeFiles/base.dir/MessageQueue.c.o: MessageQueue.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/PollServer/Base/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/base.dir/MessageQueue.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/base.dir/MessageQueue.c.o   -c /home/PollServer/Base/MessageQueue.c
+Base/CMakeFiles/base.dir/MessageQueue.c.o: Base/CMakeFiles/base.dir/flags.make
+Base/CMakeFiles/base.dir/MessageQueue.c.o: Base/MessageQueue.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/SF_PollServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object Base/CMakeFiles/base.dir/MessageQueue.c.o"
+	cd /home/SF_PollServer/Base && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/base.dir/MessageQueue.c.o   -c /home/SF_PollServer/Base/MessageQueue.c
 
-CMakeFiles/base.dir/MessageQueue.c.i: cmake_force
+Base/CMakeFiles/base.dir/MessageQueue.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/base.dir/MessageQueue.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/PollServer/Base/MessageQueue.c > CMakeFiles/base.dir/MessageQueue.c.i
+	cd /home/SF_PollServer/Base && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/SF_PollServer/Base/MessageQueue.c > CMakeFiles/base.dir/MessageQueue.c.i
 
-CMakeFiles/base.dir/MessageQueue.c.s: cmake_force
+Base/CMakeFiles/base.dir/MessageQueue.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/base.dir/MessageQueue.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/PollServer/Base/MessageQueue.c -o CMakeFiles/base.dir/MessageQueue.c.s
+	cd /home/SF_PollServer/Base && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/SF_PollServer/Base/MessageQueue.c -o CMakeFiles/base.dir/MessageQueue.c.s
 
-CMakeFiles/base.dir/common.cpp.o: CMakeFiles/base.dir/flags.make
-CMakeFiles/base.dir/common.cpp.o: common.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/PollServer/Base/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/base.dir/common.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/common.cpp.o -c /home/PollServer/Base/common.cpp
+Base/CMakeFiles/base.dir/common.cpp.o: Base/CMakeFiles/base.dir/flags.make
+Base/CMakeFiles/base.dir/common.cpp.o: Base/common.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/SF_PollServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object Base/CMakeFiles/base.dir/common.cpp.o"
+	cd /home/SF_PollServer/Base && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/common.cpp.o -c /home/SF_PollServer/Base/common.cpp
 
-CMakeFiles/base.dir/common.cpp.i: cmake_force
+Base/CMakeFiles/base.dir/common.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/base.dir/common.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/PollServer/Base/common.cpp > CMakeFiles/base.dir/common.cpp.i
+	cd /home/SF_PollServer/Base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/SF_PollServer/Base/common.cpp > CMakeFiles/base.dir/common.cpp.i
 
-CMakeFiles/base.dir/common.cpp.s: cmake_force
+Base/CMakeFiles/base.dir/common.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/base.dir/common.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/PollServer/Base/common.cpp -o CMakeFiles/base.dir/common.cpp.s
+	cd /home/SF_PollServer/Base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/SF_PollServer/Base/common.cpp -o CMakeFiles/base.dir/common.cpp.s
 
 # Object files for target base
 base_OBJECTS = \
@@ -175,30 +175,30 @@ base_OBJECTS = \
 # External object files for target base
 base_EXTERNAL_OBJECTS =
 
-/home/PollServer/libs/libbase.a: CMakeFiles/base.dir/BaseList.cpp.o
-/home/PollServer/libs/libbase.a: CMakeFiles/base.dir/CommonList.cpp.o
-/home/PollServer/libs/libbase.a: CMakeFiles/base.dir/Condition.cpp.o
-/home/PollServer/libs/libbase.a: CMakeFiles/base.dir/ConfigFileReader.cpp.o
-/home/PollServer/libs/libbase.a: CMakeFiles/base.dir/LibcurClient.cpp.o
-/home/PollServer/libs/libbase.a: CMakeFiles/base.dir/Lock.cpp.o
-/home/PollServer/libs/libbase.a: CMakeFiles/base.dir/MessageQueue.c.o
-/home/PollServer/libs/libbase.a: CMakeFiles/base.dir/common.cpp.o
-/home/PollServer/libs/libbase.a: CMakeFiles/base.dir/build.make
-/home/PollServer/libs/libbase.a: CMakeFiles/base.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/PollServer/Base/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library /home/PollServer/libs/libbase.a"
-	$(CMAKE_COMMAND) -P CMakeFiles/base.dir/cmake_clean_target.cmake
-	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/base.dir/link.txt --verbose=$(VERBOSE)
+libs/libbase.a: Base/CMakeFiles/base.dir/BaseList.cpp.o
+libs/libbase.a: Base/CMakeFiles/base.dir/CommonList.cpp.o
+libs/libbase.a: Base/CMakeFiles/base.dir/Condition.cpp.o
+libs/libbase.a: Base/CMakeFiles/base.dir/ConfigFileReader.cpp.o
+libs/libbase.a: Base/CMakeFiles/base.dir/LibcurClient.cpp.o
+libs/libbase.a: Base/CMakeFiles/base.dir/Lock.cpp.o
+libs/libbase.a: Base/CMakeFiles/base.dir/MessageQueue.c.o
+libs/libbase.a: Base/CMakeFiles/base.dir/common.cpp.o
+libs/libbase.a: Base/CMakeFiles/base.dir/build.make
+libs/libbase.a: Base/CMakeFiles/base.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/SF_PollServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library ../libs/libbase.a"
+	cd /home/SF_PollServer/Base && $(CMAKE_COMMAND) -P CMakeFiles/base.dir/cmake_clean_target.cmake
+	cd /home/SF_PollServer/Base && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/base.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/base.dir/build: /home/PollServer/libs/libbase.a
+Base/CMakeFiles/base.dir/build: libs/libbase.a
 
-.PHONY : CMakeFiles/base.dir/build
+.PHONY : Base/CMakeFiles/base.dir/build
 
-CMakeFiles/base.dir/clean:
-	$(CMAKE_COMMAND) -P CMakeFiles/base.dir/cmake_clean.cmake
-.PHONY : CMakeFiles/base.dir/clean
+Base/CMakeFiles/base.dir/clean:
+	cd /home/SF_PollServer/Base && $(CMAKE_COMMAND) -P CMakeFiles/base.dir/cmake_clean.cmake
+.PHONY : Base/CMakeFiles/base.dir/clean
 
-CMakeFiles/base.dir/depend:
-	cd /home/PollServer/Base && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/PollServer/Base /home/PollServer/Base /home/PollServer/Base /home/PollServer/Base /home/PollServer/Base/CMakeFiles/base.dir/DependInfo.cmake --color=$(COLOR)
-.PHONY : CMakeFiles/base.dir/depend
+Base/CMakeFiles/base.dir/depend:
+	cd /home/SF_PollServer && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/SF_PollServer /home/SF_PollServer/Base /home/SF_PollServer /home/SF_PollServer/Base /home/SF_PollServer/Base/CMakeFiles/base.dir/DependInfo.cmake --color=$(COLOR)
+.PHONY : Base/CMakeFiles/base.dir/depend
 

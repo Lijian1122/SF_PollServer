@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/PollServer/Business/PollBroadcastRoom.cpp" "/home/PollServer/Business/CMakeFiles/business.dir/PollBroadcastRoom.cpp.o"
-  "/home/PollServer/Business/PollLiveState.cpp" "/home/PollServer/Business/CMakeFiles/business.dir/PollLiveState.cpp.o"
+  "/home/SF_PollServer/Business/PollBroadcastRoom.cpp" "/home/SF_PollServer/Business/CMakeFiles/business.dir/PollBroadcastRoom.cpp.o"
+  "/home/SF_PollServer/Business/PollLiveState.cpp" "/home/SF_PollServer/Business/CMakeFiles/business.dir/PollLiveState.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

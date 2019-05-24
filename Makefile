@@ -48,10 +48,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/PollServer
+CMAKE_SOURCE_DIR = /home/SF_PollServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/PollServer
+CMAKE_BINARY_DIR = /home/SF_PollServer
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/PollServer/CMakeFiles /home/PollServer/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/SF_PollServer/CMakeFiles /home/SF_PollServer/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/PollServer/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/SF_PollServer/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,6 +123,45 @@ pollServer/fast:
 	$(MAKE) -f CMakeFiles/pollServer.dir/build.make CMakeFiles/pollServer.dir/build
 .PHONY : pollServer/fast
 
+#=============================================================================
+# Target rules for targets named server
+
+# Build rule for target.
+server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 server
+.PHONY : server
+
+# fast build rule for target.
+server/fast:
+	$(MAKE) -f Http/CMakeFiles/server.dir/build.make Http/CMakeFiles/server.dir/build
+.PHONY : server/fast
+
+#=============================================================================
+# Target rules for targets named base
+
+# Build rule for target.
+base: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 base
+.PHONY : base
+
+# fast build rule for target.
+base/fast:
+	$(MAKE) -f Base/CMakeFiles/base.dir/build.make Base/CMakeFiles/base.dir/build
+.PHONY : base/fast
+
+#=============================================================================
+# Target rules for targets named pollMonitor
+
+# Build rule for target.
+pollMonitor: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pollMonitor
+.PHONY : pollMonitor
+
+# fast build rule for target.
+pollMonitor/fast:
+	$(MAKE) -f Monitor/CMakeFiles/pollMonitor.dir/build.make Monitor/CMakeFiles/pollMonitor.dir/build
+.PHONY : pollMonitor/fast
+
 pollServer.o: pollServer.cpp.o
 
 .PHONY : pollServer.o
@@ -159,6 +198,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... pollServer"
+	@echo "... server"
+	@echo "... base"
+	@echo "... pollMonitor"
 	@echo "... pollServer.o"
 	@echo "... pollServer.i"
 	@echo "... pollServer.s"

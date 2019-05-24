@@ -43,45 +43,45 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/PollServer/Http
+CMAKE_SOURCE_DIR = /home/SF_PollServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/PollServer/Http
+CMAKE_BINARY_DIR = /home/SF_PollServer
 
 # Include any dependencies generated for this target.
-include CMakeFiles/server.dir/depend.make
+include Http/CMakeFiles/server.dir/depend.make
 
 # Include the progress variables for this target.
-include CMakeFiles/server.dir/progress.make
+include Http/CMakeFiles/server.dir/progress.make
 
 # Include the compile flags for this target's objects.
-include CMakeFiles/server.dir/flags.make
+include Http/CMakeFiles/server.dir/flags.make
 
-CMakeFiles/server.dir/mongoose.c.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/mongoose.c.o: mongoose.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/PollServer/Http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/server.dir/mongoose.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/server.dir/mongoose.c.o   -c /home/PollServer/Http/mongoose.c
+Http/CMakeFiles/server.dir/mongoose.c.o: Http/CMakeFiles/server.dir/flags.make
+Http/CMakeFiles/server.dir/mongoose.c.o: Http/mongoose.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/SF_PollServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object Http/CMakeFiles/server.dir/mongoose.c.o"
+	cd /home/SF_PollServer/Http && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/server.dir/mongoose.c.o   -c /home/SF_PollServer/Http/mongoose.c
 
-CMakeFiles/server.dir/mongoose.c.i: cmake_force
+Http/CMakeFiles/server.dir/mongoose.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/server.dir/mongoose.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/PollServer/Http/mongoose.c > CMakeFiles/server.dir/mongoose.c.i
+	cd /home/SF_PollServer/Http && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/SF_PollServer/Http/mongoose.c > CMakeFiles/server.dir/mongoose.c.i
 
-CMakeFiles/server.dir/mongoose.c.s: cmake_force
+Http/CMakeFiles/server.dir/mongoose.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/server.dir/mongoose.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/PollServer/Http/mongoose.c -o CMakeFiles/server.dir/mongoose.c.s
+	cd /home/SF_PollServer/Http && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/SF_PollServer/Http/mongoose.c -o CMakeFiles/server.dir/mongoose.c.s
 
-CMakeFiles/server.dir/webserver.cpp.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/webserver.cpp.o: webserver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/PollServer/Http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/server.dir/webserver.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/webserver.cpp.o -c /home/PollServer/Http/webserver.cpp
+Http/CMakeFiles/server.dir/webserver.cpp.o: Http/CMakeFiles/server.dir/flags.make
+Http/CMakeFiles/server.dir/webserver.cpp.o: Http/webserver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/SF_PollServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Http/CMakeFiles/server.dir/webserver.cpp.o"
+	cd /home/SF_PollServer/Http && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/webserver.cpp.o -c /home/SF_PollServer/Http/webserver.cpp
 
-CMakeFiles/server.dir/webserver.cpp.i: cmake_force
+Http/CMakeFiles/server.dir/webserver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/webserver.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/PollServer/Http/webserver.cpp > CMakeFiles/server.dir/webserver.cpp.i
+	cd /home/SF_PollServer/Http && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/SF_PollServer/Http/webserver.cpp > CMakeFiles/server.dir/webserver.cpp.i
 
-CMakeFiles/server.dir/webserver.cpp.s: cmake_force
+Http/CMakeFiles/server.dir/webserver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/webserver.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/PollServer/Http/webserver.cpp -o CMakeFiles/server.dir/webserver.cpp.s
+	cd /home/SF_PollServer/Http && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/SF_PollServer/Http/webserver.cpp -o CMakeFiles/server.dir/webserver.cpp.s
 
 # Object files for target server
 server_OBJECTS = \
@@ -91,24 +91,24 @@ server_OBJECTS = \
 # External object files for target server
 server_EXTERNAL_OBJECTS =
 
-/home/PollServer/libs/libserver.a: CMakeFiles/server.dir/mongoose.c.o
-/home/PollServer/libs/libserver.a: CMakeFiles/server.dir/webserver.cpp.o
-/home/PollServer/libs/libserver.a: CMakeFiles/server.dir/build.make
-/home/PollServer/libs/libserver.a: CMakeFiles/server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/PollServer/Http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library /home/PollServer/libs/libserver.a"
-	$(CMAKE_COMMAND) -P CMakeFiles/server.dir/cmake_clean_target.cmake
-	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server.dir/link.txt --verbose=$(VERBOSE)
+libs/libserver.a: Http/CMakeFiles/server.dir/mongoose.c.o
+libs/libserver.a: Http/CMakeFiles/server.dir/webserver.cpp.o
+libs/libserver.a: Http/CMakeFiles/server.dir/build.make
+libs/libserver.a: Http/CMakeFiles/server.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/SF_PollServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library ../libs/libserver.a"
+	cd /home/SF_PollServer/Http && $(CMAKE_COMMAND) -P CMakeFiles/server.dir/cmake_clean_target.cmake
+	cd /home/SF_PollServer/Http && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/server.dir/build: /home/PollServer/libs/libserver.a
+Http/CMakeFiles/server.dir/build: libs/libserver.a
 
-.PHONY : CMakeFiles/server.dir/build
+.PHONY : Http/CMakeFiles/server.dir/build
 
-CMakeFiles/server.dir/clean:
-	$(CMAKE_COMMAND) -P CMakeFiles/server.dir/cmake_clean.cmake
-.PHONY : CMakeFiles/server.dir/clean
+Http/CMakeFiles/server.dir/clean:
+	cd /home/SF_PollServer/Http && $(CMAKE_COMMAND) -P CMakeFiles/server.dir/cmake_clean.cmake
+.PHONY : Http/CMakeFiles/server.dir/clean
 
-CMakeFiles/server.dir/depend:
-	cd /home/PollServer/Http && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/PollServer/Http /home/PollServer/Http /home/PollServer/Http /home/PollServer/Http /home/PollServer/Http/CMakeFiles/server.dir/DependInfo.cmake --color=$(COLOR)
-.PHONY : CMakeFiles/server.dir/depend
+Http/CMakeFiles/server.dir/depend:
+	cd /home/SF_PollServer && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/SF_PollServer /home/SF_PollServer/Http /home/SF_PollServer /home/SF_PollServer/Http /home/SF_PollServer/Http/CMakeFiles/server.dir/DependInfo.cmake --color=$(COLOR)
+.PHONY : Http/CMakeFiles/server.dir/depend
 

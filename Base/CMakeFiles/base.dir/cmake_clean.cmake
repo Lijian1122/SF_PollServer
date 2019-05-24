@@ -7,8 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/base.dir/Lock.cpp.o"
   "CMakeFiles/base.dir/MessageQueue.c.o"
   "CMakeFiles/base.dir/common.cpp.o"
-  "/home/PollServer/libs/libbase.pdb"
-  "/home/PollServer/libs/libbase.a"
+  "../libs/libbase.pdb"
+  "../libs/libbase.a"
 )
 
 # Per-language clean rules from dependency scanning.

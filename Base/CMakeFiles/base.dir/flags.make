@@ -7,11 +7,11 @@ C_FLAGS = -g
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/PollServer/Base -I/home/PollServer/Base/curl -I/home/PollServer/Base/.. -I/home/PollServer/Base/../muduo -I/home/PollServer/Base/../muduo/base -I/home/PollServer/Base/../muduo/net 
+C_INCLUDES = -I/home/SF_PollServer -I/home/SF_PollServer/muduo/base -I/home/SF_PollServer/muduo/net -I/home/SF_PollServer/Base -I/home/SF_PollServer/Http -I/home/SF_PollServer/Business -I/home/SF_PollServer/Base/curl -I/home/SF_PollServer/Base/.. -I/home/SF_PollServer/Base/../muduo -I/home/SF_PollServer/Base/../muduo/base -I/home/SF_PollServer/Base/../muduo/net 
 
 CXX_FLAGS =  -O0 -Wall -std=c++11  -fPIC  -Wno-deprecated  -Wno-write-strings -g -ggdb  
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/PollServer/Base -I/home/PollServer/Base/curl -I/home/PollServer/Base/.. -I/home/PollServer/Base/../muduo -I/home/PollServer/Base/../muduo/base -I/home/PollServer/Base/../muduo/net 
+CXX_INCLUDES = -I/home/SF_PollServer -I/home/SF_PollServer/muduo/base -I/home/SF_PollServer/muduo/net -I/home/SF_PollServer/Base -I/home/SF_PollServer/Http -I/home/SF_PollServer/Business -I/home/SF_PollServer/Base/curl -I/home/SF_PollServer/Base/.. -I/home/SF_PollServer/Base/../muduo -I/home/SF_PollServer/Base/../muduo/base -I/home/SF_PollServer/Base/../muduo/net 
 

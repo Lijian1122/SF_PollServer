@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/business.dir/PollBroadcastRoom.cpp.o"
   "CMakeFiles/business.dir/PollLiveState.cpp.o"
-  "/home/PollServer/libs/libbusiness.pdb"
-  "/home/PollServer/libs/libbusiness.a"
+  "/home/SF_PollServer/libs/libbusiness.pdb"
+  "/home/SF_PollServer/libs/libbusiness.a"
 )
 
 # Per-language clean rules from dependency scanning.

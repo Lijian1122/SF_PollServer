@@ -6,5 +6,5 @@ CXX_FLAGS =  -O0 -Wall -std=c++11  -fPIC -Wno-deprecated  -Wunused-value  -Wno-w
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/PollServer -I/home/PollServer/muduo/base -I/home/PollServer/muduo/net -I/home/PollServer/Base -I/home/PollServer/Http -I/home/PollServer/Business 
+CXX_INCLUDES = -I/home/SF_PollServer -I/home/SF_PollServer/muduo/base -I/home/SF_PollServer/muduo/net -I/home/SF_PollServer/Base -I/home/SF_PollServer/Http -I/home/SF_PollServer/Business 
 

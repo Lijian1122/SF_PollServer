@@ -1,2 +1,2 @@
-/usr/bin/ar qc /home/PollServer/libs/libbusiness.a  CMakeFiles/business.dir/PollBroadcastRoom.cpp.o CMakeFiles/business.dir/PollLiveState.cpp.o
-/usr/bin/ranlib /home/PollServer/libs/libbusiness.a
+/usr/bin/ar qc /home/SF_PollServer/libs/libbusiness.a  CMakeFiles/business.dir/PollBroadcastRoom.cpp.o CMakeFiles/business.dir/PollLiveState.cpp.o
+/usr/bin/ranlib /home/SF_PollServer/libs/libbusiness.a

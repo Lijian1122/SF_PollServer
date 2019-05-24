@@ -1,0 +1,4 @@
+Log file created at: 2019/05/24 18:57:02
+Running on machine: live2.sanhai
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0524 18:57:02.914019 28134 pollMonitor.cpp:46] pid :28135

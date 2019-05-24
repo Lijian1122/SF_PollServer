@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/server.dir/mongoose.c.o"
   "CMakeFiles/server.dir/webserver.cpp.o"
-  "/home/PollServer/libs/libserver.pdb"
-  "/home/PollServer/libs/libserver.a"
+  "../libs/libserver.pdb"
+  "../libs/libserver.a"
 )
 
 # Per-language clean rules from dependency scanning.

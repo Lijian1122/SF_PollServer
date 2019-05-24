@@ -1,0 +1,3 @@
+/home/SF_PollServer/Monitor/CMakeFiles/rebuild_cache.dir
+/home/SF_PollServer/Monitor/CMakeFiles/edit_cache.dir
+/home/SF_PollServer/Monitor/CMakeFiles/pollMonitor.dir

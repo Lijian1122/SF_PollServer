@@ -1,3 +1,12 @@
-/home/PollServer/CMakeFiles/rebuild_cache.dir
-/home/PollServer/CMakeFiles/edit_cache.dir
-/home/PollServer/CMakeFiles/pollServer.dir
+/home/SF_PollServer/CMakeFiles/rebuild_cache.dir
+/home/SF_PollServer/CMakeFiles/edit_cache.dir
+/home/SF_PollServer/CMakeFiles/pollServer.dir
+/home/SF_PollServer/Http/CMakeFiles/rebuild_cache.dir
+/home/SF_PollServer/Http/CMakeFiles/edit_cache.dir
+/home/SF_PollServer/Http/CMakeFiles/server.dir
+/home/SF_PollServer/Base/CMakeFiles/rebuild_cache.dir
+/home/SF_PollServer/Base/CMakeFiles/edit_cache.dir
+/home/SF_PollServer/Base/CMakeFiles/base.dir
+/home/SF_PollServer/Monitor/CMakeFiles/rebuild_cache.dir
+/home/SF_PollServer/Monitor/CMakeFiles/edit_cache.dir
+/home/SF_PollServer/Monitor/CMakeFiles/pollMonitor.dir

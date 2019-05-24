@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/SF_PollServer/Monitor/pollMonitor.cpp
+stdio.h
+-
+unistd.h
+-
+errno.h
+-
+string.h
+-
+sys/types.h
+-
+sys/wait.h
+-
+stdlib.h
+-
+time.h
+-
+glog/logging.h
+/home/SF_PollServer/Monitor/glog/logging.h
+

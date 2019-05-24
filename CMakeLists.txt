@@ -13,8 +13,9 @@ ${PROJECT_SOURCE_DIR}/Http
 ${PROJECT_SOURCE_DIR}/Business
 )
 
-#add_subdirectory(Http)
-#add_subdirectory(Base)
+add_subdirectory(Http)
+add_subdirectory(Base)
+add_subdirectory(Monitor)
 
 # 查找当前目录下的所有源文件
 # 并将名称保存到 LIB_SRC 变量
@@ -27,8 +28,8 @@ add_executable(pollServer ${LIB_SRC})
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}) 
 
 
-find_library(LIB_BASE muduo_base ${PROJECT_SOURCE_DIR}/libs)
-find_library(LIB_NET muduo_net ${PROJECT_SOURCE_DIR}/libs)
+find_library(LIB_MUDUOBASE muduo_base ${PROJECT_SOURCE_DIR}/libs)
+find_library(LIB_MUDUONET muduo_net ${PROJECT_SOURCE_DIR}/libs)
 find_library(LIB_SERVER server ${PROJECT_SOURCE_DIR}/libs)
 #find_library(LIB_BUSINESS business ${PROJECT_SOURCE_DIR}/libs)
 find_library(LIB_TEMP base  ${PROJECT_SOURCE_DIR}/libs)
@@ -42,7 +43,6 @@ SET(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wall")
 
 link_directories(
 ${PROJECT_SOURCE_DIR}/libs
-/home/PollServer/libs
 )
 
 #其他系统库
@@ -50,8 +50,8 @@ TARGET_LINK_LIBRARIES(pollServer ${LIB_SERVER}
                         ${LIB_BUSINESS}
                         ${LIB_JPG}
                         ${LIB_TEMP}
-                        ${LIB_NET}
-                        ${LIB_BASE}
+                        ${LIB_MUDUOBASE}
+                        ${LIB_MUDUONET}
                         avcodec
                         avformat
                         avutil
@@ -67,4 +67,5 @@ TARGET_LINK_LIBRARIES(pollServer ${LIB_SERVER}
                         curl
                         pthread
                       )
+
 

@@ -1,0 +1,1 @@
+/usr/bin/c++   -O0 -Wall -std=c++11  -fPIC -Wno-deprecated  -Wunused-value  -Wno-write-strings -g -ggdb  -rdynamic CMakeFiles/pollMonitor.dir/pollMonitor.cpp.o  -o ../pollMonitor -Wl,-Bstatic -lbase -Wl,-Bdynamic -lglog -lcurl -lpthread 

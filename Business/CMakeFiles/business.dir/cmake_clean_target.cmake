@@ -1,3 +1,3 @@
 file(REMOVE_RECURSE
-  "/home/PollServer/libs/libbusiness.a"
+  "/home/SF_PollServer/libs/libbusiness.a"
 )

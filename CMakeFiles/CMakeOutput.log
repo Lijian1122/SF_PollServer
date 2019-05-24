@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/PollServer/CMakeFiles/3.12.4/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/SF_PollServer/CMakeFiles/3.12.4/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/c++ 
@@ -23,33 +23,33 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/PollServer/CMakeFiles/3.12.4/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/SF_PollServer/CMakeFiles/3.12.4/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /home/PollServer/CMakeFiles/CMakeTmp
+Change Dir: /home/SF_PollServer/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_b8559/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_b8559.dir/build.make CMakeFiles/cmTC_b8559.dir/build
-gmake[1]: 进入目录“/home/PollServer/CMakeFiles/CMakeTmp”
-Building C object CMakeFiles/cmTC_b8559.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_b8559.dir/testCCompiler.c.o   -c /home/PollServer/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_b8559
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b8559.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_b8559.dir/testCCompiler.c.o  -o cmTC_b8559 
-gmake[1]: 离开目录“/home/PollServer/CMakeFiles/CMakeTmp”
+Run Build Command:"/usr/bin/gmake" "cmTC_b74fe/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_b74fe.dir/build.make CMakeFiles/cmTC_b74fe.dir/build
+gmake[1]: 进入目录“/home/SF_PollServer/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_b74fe.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_b74fe.dir/testCCompiler.c.o   -c /home/SF_PollServer/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_b74fe
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b74fe.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_b74fe.dir/testCCompiler.c.o  -o cmTC_b74fe 
+gmake[1]: 离开目录“/home/SF_PollServer/CMakeFiles/CMakeTmp”
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/PollServer/CMakeFiles/CMakeTmp
+Change Dir: /home/SF_PollServer/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_845f1/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_845f1.dir/build.make CMakeFiles/cmTC_845f1.dir/build
-gmake[1]: 进入目录“/home/PollServer/CMakeFiles/CMakeTmp”
-Building C object CMakeFiles/cmTC_845f1.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_845f1.dir/CMakeCCompilerABI.c.o   -c /usr/local/share/cmake-3.12/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_845f1
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_845f1.dir/link.txt --verbose=1
-/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_845f1.dir/CMakeCCompilerABI.c.o  -o cmTC_845f1 
+Run Build Command:"/usr/bin/gmake" "cmTC_e14a3/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_e14a3.dir/build.make CMakeFiles/cmTC_e14a3.dir/build
+gmake[1]: 进入目录“/home/SF_PollServer/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_e14a3.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_e14a3.dir/CMakeCCompilerABI.c.o   -c /usr/local/share/cmake-3.12/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_e14a3
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e14a3.dir/link.txt --verbose=1
+/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_e14a3.dir/CMakeCCompilerABI.c.o  -o cmTC_e14a3 
 使用内建 specs。
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/lto-wrapper
@@ -59,23 +59,23 @@ COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/lto-wrapper
 gcc 版本 4.8.5 20150623 (Red Hat 4.8.5-36) (GCC) 
 COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_845f1' '-mtune=generic' '-march=x86-64'
- /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_845f1 /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../.. CMakeFiles/cmTC_845f1.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o
-gmake[1]: 离开目录“/home/PollServer/CMakeFiles/CMakeTmp”
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_e14a3' '-mtune=generic' '-march=x86-64'
+ /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_e14a3 /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../.. CMakeFiles/cmTC_e14a3.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o
+gmake[1]: 离开目录“/home/SF_PollServer/CMakeFiles/CMakeTmp”
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/PollServer/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/SF_PollServer/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/gmake" "cmTC_845f1/fast"]
-  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_845f1.dir/build.make CMakeFiles/cmTC_845f1.dir/build]
-  ignore line: [gmake[1]: 进入目录“/home/PollServer/CMakeFiles/CMakeTmp”]
-  ignore line: [Building C object CMakeFiles/cmTC_845f1.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_845f1.dir/CMakeCCompilerABI.c.o   -c /usr/local/share/cmake-3.12/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_845f1]
-  ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_845f1.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_845f1.dir/CMakeCCompilerABI.c.o  -o cmTC_845f1 ]
+  ignore line: [Run Build Command:"/usr/bin/gmake" "cmTC_e14a3/fast"]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_e14a3.dir/build.make CMakeFiles/cmTC_e14a3.dir/build]
+  ignore line: [gmake[1]: 进入目录“/home/SF_PollServer/CMakeFiles/CMakeTmp”]
+  ignore line: [Building C object CMakeFiles/cmTC_e14a3.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_e14a3.dir/CMakeCCompilerABI.c.o   -c /usr/local/share/cmake-3.12/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_e14a3]
+  ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e14a3.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_e14a3.dir/CMakeCCompilerABI.c.o  -o cmTC_e14a3 ]
   ignore line: [使用内建 specs。]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/lto-wrapper]
@@ -85,8 +85,8 @@ Parsed C implicit link information from above output:
   ignore line: [gcc 版本 4.8.5 20150623 (Red Hat 4.8.5-36) (GCC) ]
   ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_845f1' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_845f1 /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../.. CMakeFiles/cmTC_845f1.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_e14a3' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_e14a3 /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../.. CMakeFiles/cmTC_e14a3.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o]
     arg [/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/collect2] ==> ignore
     arg [--build-id] ==> ignore
     arg [--no-add-needed] ==> ignore
@@ -98,7 +98,7 @@ Parsed C implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_845f1] ==> ignore
+    arg [cmTC_e14a3] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o] ==> ignore
@@ -107,7 +107,7 @@ Parsed C implicit link information from above output:
     arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
     arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
     arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../..]
-    arg [CMakeFiles/cmTC_845f1.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_e14a3.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -132,17 +132,17 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /home/PollServer/CMakeFiles/CMakeTmp
+Change Dir: /home/SF_PollServer/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_e50fc/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_e50fc.dir/build.make CMakeFiles/cmTC_e50fc.dir/build
-gmake[1]: 进入目录“/home/PollServer/CMakeFiles/CMakeTmp”
-Building C object CMakeFiles/cmTC_e50fc.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_e50fc.dir/feature_tests.c.o   -c /home/PollServer/CMakeFiles/feature_tests.c
-Linking C executable cmTC_e50fc
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e50fc.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_e50fc.dir/feature_tests.c.o  -o cmTC_e50fc 
-gmake[1]: 离开目录“/home/PollServer/CMakeFiles/CMakeTmp”
+Run Build Command:"/usr/bin/gmake" "cmTC_1dcfb/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_1dcfb.dir/build.make CMakeFiles/cmTC_1dcfb.dir/build
+gmake[1]: 进入目录“/home/SF_PollServer/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_1dcfb.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_1dcfb.dir/feature_tests.c.o   -c /home/SF_PollServer/CMakeFiles/feature_tests.c
+Linking C executable cmTC_1dcfb
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1dcfb.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_1dcfb.dir/feature_tests.c.o  -o cmTC_1dcfb 
+gmake[1]: 离开目录“/home/SF_PollServer/CMakeFiles/CMakeTmp”
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -152,17 +152,17 @@ gmake[1]: 离开目录“/home/PollServer/CMakeFiles/CMakeTmp”
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /home/PollServer/CMakeFiles/CMakeTmp
+Change Dir: /home/SF_PollServer/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_44c89/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_44c89.dir/build.make CMakeFiles/cmTC_44c89.dir/build
-gmake[1]: 进入目录“/home/PollServer/CMakeFiles/CMakeTmp”
-Building C object CMakeFiles/cmTC_44c89.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_44c89.dir/feature_tests.c.o   -c /home/PollServer/CMakeFiles/feature_tests.c
-Linking C executable cmTC_44c89
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_44c89.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_44c89.dir/feature_tests.c.o  -o cmTC_44c89 
-gmake[1]: 离开目录“/home/PollServer/CMakeFiles/CMakeTmp”
+Run Build Command:"/usr/bin/gmake" "cmTC_c03b1/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_c03b1.dir/build.make CMakeFiles/cmTC_c03b1.dir/build
+gmake[1]: 进入目录“/home/SF_PollServer/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_c03b1.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_c03b1.dir/feature_tests.c.o   -c /home/SF_PollServer/CMakeFiles/feature_tests.c
+Linking C executable cmTC_c03b1
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c03b1.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_c03b1.dir/feature_tests.c.o  -o cmTC_c03b1 
+gmake[1]: 离开目录“/home/SF_PollServer/CMakeFiles/CMakeTmp”
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -172,17 +172,17 @@ gmake[1]: 离开目录“/home/PollServer/CMakeFiles/CMakeTmp”
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /home/PollServer/CMakeFiles/CMakeTmp
+Change Dir: /home/SF_PollServer/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_d626c/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_d626c.dir/build.make CMakeFiles/cmTC_d626c.dir/build
-gmake[1]: 进入目录“/home/PollServer/CMakeFiles/CMakeTmp”
-Building C object CMakeFiles/cmTC_d626c.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_d626c.dir/feature_tests.c.o   -c /home/PollServer/CMakeFiles/feature_tests.c
-Linking C executable cmTC_d626c
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d626c.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_d626c.dir/feature_tests.c.o  -o cmTC_d626c 
-gmake[1]: 离开目录“/home/PollServer/CMakeFiles/CMakeTmp”
+Run Build Command:"/usr/bin/gmake" "cmTC_163fd/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_163fd.dir/build.make CMakeFiles/cmTC_163fd.dir/build
+gmake[1]: 进入目录“/home/SF_PollServer/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_163fd.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_163fd.dir/feature_tests.c.o   -c /home/SF_PollServer/CMakeFiles/feature_tests.c
+Linking C executable cmTC_163fd
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_163fd.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_163fd.dir/feature_tests.c.o  -o cmTC_163fd 
+gmake[1]: 离开目录“/home/SF_PollServer/CMakeFiles/CMakeTmp”
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -190,30 +190,30 @@ gmake[1]: 离开目录“/home/PollServer/CMakeFiles/CMakeTmp”
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/PollServer/CMakeFiles/CMakeTmp
+Change Dir: /home/SF_PollServer/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_b6e4f/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_b6e4f.dir/build.make CMakeFiles/cmTC_b6e4f.dir/build
-gmake[1]: 进入目录“/home/PollServer/CMakeFiles/CMakeTmp”
-Building CXX object CMakeFiles/cmTC_b6e4f.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_b6e4f.dir/testCXXCompiler.cxx.o -c /home/PollServer/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_b6e4f
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b6e4f.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_b6e4f.dir/testCXXCompiler.cxx.o  -o cmTC_b6e4f 
-gmake[1]: 离开目录“/home/PollServer/CMakeFiles/CMakeTmp”
+Run Build Command:"/usr/bin/gmake" "cmTC_b0f3a/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_b0f3a.dir/build.make CMakeFiles/cmTC_b0f3a.dir/build
+gmake[1]: 进入目录“/home/SF_PollServer/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_b0f3a.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_b0f3a.dir/testCXXCompiler.cxx.o -c /home/SF_PollServer/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_b0f3a
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b0f3a.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_b0f3a.dir/testCXXCompiler.cxx.o  -o cmTC_b0f3a 
+gmake[1]: 离开目录“/home/SF_PollServer/CMakeFiles/CMakeTmp”
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/PollServer/CMakeFiles/CMakeTmp
+Change Dir: /home/SF_PollServer/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_fef1a/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_fef1a.dir/build.make CMakeFiles/cmTC_fef1a.dir/build
-gmake[1]: 进入目录“/home/PollServer/CMakeFiles/CMakeTmp”
-Building CXX object CMakeFiles/cmTC_fef1a.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTC_fef1a.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-3.12/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_fef1a
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fef1a.dir/link.txt --verbose=1
-/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_fef1a.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_fef1a 
+Run Build Command:"/usr/bin/gmake" "cmTC_56051/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_56051.dir/build.make CMakeFiles/cmTC_56051.dir/build
+gmake[1]: 进入目录“/home/SF_PollServer/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_56051.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_56051.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-3.12/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_56051
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_56051.dir/link.txt --verbose=1
+/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_56051.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_56051 
 使用内建 specs。
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/lto-wrapper
@@ -223,23 +223,23 @@ COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/lto-wrapper
 gcc 版本 4.8.5 20150623 (Red Hat 4.8.5-36) (GCC) 
 COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_fef1a' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_fef1a /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../.. CMakeFiles/cmTC_fef1a.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o
-gmake[1]: 离开目录“/home/PollServer/CMakeFiles/CMakeTmp”
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_56051' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_56051 /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../.. CMakeFiles/cmTC_56051.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o
+gmake[1]: 离开目录“/home/SF_PollServer/CMakeFiles/CMakeTmp”
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/PollServer/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/SF_PollServer/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/gmake" "cmTC_fef1a/fast"]
-  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_fef1a.dir/build.make CMakeFiles/cmTC_fef1a.dir/build]
-  ignore line: [gmake[1]: 进入目录“/home/PollServer/CMakeFiles/CMakeTmp”]
-  ignore line: [Building CXX object CMakeFiles/cmTC_fef1a.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_fef1a.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-3.12/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_fef1a]
-  ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fef1a.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_fef1a.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_fef1a ]
+  ignore line: [Run Build Command:"/usr/bin/gmake" "cmTC_56051/fast"]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_56051.dir/build.make CMakeFiles/cmTC_56051.dir/build]
+  ignore line: [gmake[1]: 进入目录“/home/SF_PollServer/CMakeFiles/CMakeTmp”]
+  ignore line: [Building CXX object CMakeFiles/cmTC_56051.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_56051.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-3.12/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_56051]
+  ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_56051.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_56051.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_56051 ]
   ignore line: [使用内建 specs。]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/lto-wrapper]
@@ -249,8 +249,8 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc 版本 4.8.5 20150623 (Red Hat 4.8.5-36) (GCC) ]
   ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_fef1a' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_fef1a /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../.. CMakeFiles/cmTC_fef1a.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_56051' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_56051 /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../.. CMakeFiles/cmTC_56051.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o]
     arg [/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/collect2] ==> ignore
     arg [--build-id] ==> ignore
     arg [--no-add-needed] ==> ignore
@@ -262,7 +262,7 @@ Parsed CXX implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_fef1a] ==> ignore
+    arg [cmTC_56051] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o] ==> ignore
@@ -271,7 +271,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
     arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
     arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../..]
-    arg [CMakeFiles/cmTC_fef1a.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_56051.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -294,17 +294,17 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++1y] compiler features compiled with the following output:
-Change Dir: /home/PollServer/CMakeFiles/CMakeTmp
+Change Dir: /home/SF_PollServer/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_afd87/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_afd87.dir/build.make CMakeFiles/cmTC_afd87.dir/build
-gmake[1]: 进入目录“/home/PollServer/CMakeFiles/CMakeTmp”
-Building CXX object CMakeFiles/cmTC_afd87.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++1y -o CMakeFiles/cmTC_afd87.dir/feature_tests.cxx.o -c /home/PollServer/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_afd87
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_afd87.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_afd87.dir/feature_tests.cxx.o  -o cmTC_afd87 
-gmake[1]: 离开目录“/home/PollServer/CMakeFiles/CMakeTmp”
+Run Build Command:"/usr/bin/gmake" "cmTC_a6306/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_a6306.dir/build.make CMakeFiles/cmTC_a6306.dir/build
+gmake[1]: 进入目录“/home/SF_PollServer/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_a6306.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1y -o CMakeFiles/cmTC_a6306.dir/feature_tests.cxx.o -c /home/SF_PollServer/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_a6306
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a6306.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_a6306.dir/feature_tests.cxx.o  -o cmTC_a6306 
+gmake[1]: 离开目录“/home/SF_PollServer/CMakeFiles/CMakeTmp”
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -367,17 +367,17 @@ gmake[1]: 离开目录“/home/PollServer/CMakeFiles/CMakeTmp”
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /home/PollServer/CMakeFiles/CMakeTmp
+Change Dir: /home/SF_PollServer/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_4d05f/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_4d05f.dir/build.make CMakeFiles/cmTC_4d05f.dir/build
-gmake[1]: 进入目录“/home/PollServer/CMakeFiles/CMakeTmp”
-Building CXX object CMakeFiles/cmTC_4d05f.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_4d05f.dir/feature_tests.cxx.o -c /home/PollServer/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_4d05f
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4d05f.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_4d05f.dir/feature_tests.cxx.o  -o cmTC_4d05f 
-gmake[1]: 离开目录“/home/PollServer/CMakeFiles/CMakeTmp”
+Run Build Command:"/usr/bin/gmake" "cmTC_d7d63/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_d7d63.dir/build.make CMakeFiles/cmTC_d7d63.dir/build
+gmake[1]: 进入目录“/home/SF_PollServer/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_d7d63.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_d7d63.dir/feature_tests.cxx.o -c /home/SF_PollServer/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_d7d63
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d7d63.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_d7d63.dir/feature_tests.cxx.o  -o cmTC_d7d63 
+gmake[1]: 离开目录“/home/SF_PollServer/CMakeFiles/CMakeTmp”
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -440,17 +440,17 @@ gmake[1]: 离开目录“/home/PollServer/CMakeFiles/CMakeTmp”
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /home/PollServer/CMakeFiles/CMakeTmp
+Change Dir: /home/SF_PollServer/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_da854/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_da854.dir/build.make CMakeFiles/cmTC_da854.dir/build
-gmake[1]: 进入目录“/home/PollServer/CMakeFiles/CMakeTmp”
-Building CXX object CMakeFiles/cmTC_da854.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_da854.dir/feature_tests.cxx.o -c /home/PollServer/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_da854
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_da854.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_da854.dir/feature_tests.cxx.o  -o cmTC_da854 
-gmake[1]: 离开目录“/home/PollServer/CMakeFiles/CMakeTmp”
+Run Build Command:"/usr/bin/gmake" "cmTC_a0aa2/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_a0aa2.dir/build.make CMakeFiles/cmTC_a0aa2.dir/build
+gmake[1]: 进入目录“/home/SF_PollServer/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_a0aa2.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_a0aa2.dir/feature_tests.cxx.o -c /home/SF_PollServer/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_a0aa2
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a0aa2.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_a0aa2.dir/feature_tests.cxx.o  -o cmTC_a0aa2 
+gmake[1]: 离开目录“/home/SF_PollServer/CMakeFiles/CMakeTmp”
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
