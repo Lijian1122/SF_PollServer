@@ -22,6 +22,11 @@ v 0.0.1
 
 using namespace std;
 
+typedef struct {
+    int eventType;
+    int	 intervalTime;
+} event_info_t;
+
 class CConfigFileReader
 {
 public:
@@ -40,7 +45,5 @@ private:
     map<string, string> m_config_map;
     string m_config_file;
 };
-
-
 
 #endif /* CONFIGFILEREADER_H_ */

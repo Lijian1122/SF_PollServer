@@ -36,13 +36,13 @@ class PollLiveState
         ~PollLiveState();
 
         //轮询直播状态
-        int pollState(string &selectUrl, string &select);
+        void pollState();
 
         //查询liveID状态
         int selectStateByliveID(string &liveID);
 		
-	//判断liveID状态
-	int pollStateByliveID(string &liveID ,int liveFlag ,int recordFlag, int planStartTime, int planDuration, int realStartTime, int nowTime,int lastUpdataTime);
+	    //判断liveID状态
+	    int pollStateByliveID(string &liveID ,int liveFlag ,int recordFlag, int planStartTime, int planDuration, int realStartTime, int nowTime,int lastUpdataTime);
 
         //修改liveID状态
         int changeStateByliveID(string &liveID ,int Flag , STATETYPE type);		

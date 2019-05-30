@@ -44,6 +44,7 @@ typedef struct _TimerParam{
   POLLTYPE  type;
   POLLSTATE state;
   string  paramstr;
+  int  intervalTime = 600;   //轮询间隔时间单位为s
   TimerId fd;  
 }TimerParam;
 

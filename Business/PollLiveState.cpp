@@ -7,11 +7,11 @@ PollLiveState::PollLiveState()
 
 
 //轮询直播状态
-int PollLiveState::pollState(string &selectUrl, string &select)
+void PollLiveState::pollState()
 {
-        string liveID = "100120190330P6jUPHIs";
-	int resCode = selectStateByliveID(liveID);
-        return resCode;
+        //string liveID = "100120190330P6jUPHIs";
+	    //int resCode = selectStateByliveID(liveID);
+	printf("直播状态正在轮询中6666...  \n");
 }
 
 //根据liveID轮询状态
@@ -87,7 +87,7 @@ int PollLiveState::pollStateByliveID(string &liveID ,int liveFlag ,int recordFla
 	    }
 	}else if(liveFlag == 3 && liveFlag == 4)
 	{
-		 if(nowTime - lastUpdataTime > 15*60)//直播中断后规定时间内未重新直播(15分钟)
+		 if((nowTime - lastUpdataTime) > 15*60) //直播中断后规定时间内未重新直播(15分钟)
 		 {
 			 flag = 9;
 			 

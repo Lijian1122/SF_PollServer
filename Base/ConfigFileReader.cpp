@@ -5,8 +5,45 @@
  *      Author: ziteng@mogujie.com
  */
 
-
 #include "ConfigFileReader.h"
+
+static event_info_t* read_event_config(CConfigFileReader* config_file, const char* type_format,
+								const char* time_format, int &event_count)
+{
+	char type_key[64] = {0};
+	char time_key[64] = {0};
+	event_count = 0;
+
+	// get event_count first;
+	while (true) {
+		sprintf(type_key, "%s%d", type_format, event_count + 1);
+		sprintf(time_key, "%s%d", time_format, event_count + 1);
+		char* type_value = config_file->GetConfigName(type_key);
+		char* time_value = config_file->GetConfigName(time_key);
+		if (!type_value || !time_value) {
+			break;
+		}
+		event_count++;
+	}
+
+	if (event_count == 0) {
+		return NULL;
+	}
+
+	event_info_t* event_list = new event_info_t [event_count];
+
+	for (int i = 0; i < event_count; i++) {
+		sprintf(type_key, "%s%d", type_format, i + 1);
+		sprintf(time_key, "%s%d", time_format, i + 1);
+		char* type_value = config_file->GetConfigName(type_key);
+		char* time_value = config_file->GetConfigName(time_key);
+		event_list[i].eventType = atoi(type_value);
+		event_list[i].intervalTime = atoi(time_value);
+	}
+	return event_list;
+}
+
+
 CConfigFileReader::CConfigFileReader(const char* filename)
 {
 	_LoadFile(filename);

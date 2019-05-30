@@ -28,6 +28,7 @@ v 0.0.2
 #include "Exception.h"
 #include "ConfigFileReader.h"
 #include "PollBroadcastRoom.h"
+#include "PollLiveState.h"
 #include "common.h"
 #include "BaseList.h"
 
@@ -40,7 +41,12 @@ extern int StatePollTime,BroadcastPollTime;
 
 EventLoop* g_loop;
 CommonList* g_commList;
+
+//通过web接口控制的轮询事件队列
 CommonList *timer_commList;
+
+//本地可配置的轮询事件队列
+CommonList *timer_confList;
 
 bool manageFlag = true;
 string logstr = "./log/";

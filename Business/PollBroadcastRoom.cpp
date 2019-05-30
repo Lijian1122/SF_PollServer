@@ -8,6 +8,11 @@ PollBroadcastRoom::~PollBroadcastRoom()
 {
 }
 
+void PollBroadcastRoom::pollBroadcast()
+{
+	printf("直播状态正在轮询中8888...  \n");
+}
+
 int PollBroadcastRoom::flvToJpg(const char *pullUrl , const char *liveId)
 {
 	int resCode = 0;

@@ -62,12 +62,11 @@ class PollBroadcastRoom{
   public:
 	 PollBroadcastRoom();
 	 ~PollBroadcastRoom();
-	  
-	 /*
-	  功能： 拉流生成jpeg图片
-	  参数： pullUrl 拉流地址; liveId 直播ID
-	  返回值：0 成功  非0 失败
-	 */
+
+	 //先查询轮询正在直播的直播，然后依次轮询每个直播间
+	 void pollBroadcast();
+
+	 //根据liveID拉流生成jpeg图片
 	 int flvToJpg(const char *pullUrl, const char *liveId);	
   private:
   

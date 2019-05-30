@@ -1,35 +1,3 @@
-/*#include <stdio.h>
-#include <unistd.h>
-#include <assert.h>
-#include <signal.h>
-#include <string.h>
-#include "webserver.h"
-#include "EventLoop.h"
-#include "EventLoopThread.h"
-#include "Thread.h"
-#include "ThreadPool.h"
-#include "Exception.h"
-#include "ConfigFileReader.h"
-#include "PollBroadcastRoom.h"
-#include "common.h"
-#include "BaseList.h"
-
-using namespace muduo;
-using namespace muduo::net;
-using namespace std;
-
-extern string  ServerIP,ServerAllID,SelectState,UpdataState,PullUrl;
-extern int StatePollTime,BroadcastPollTime;
-
-EventLoop* g_loop;
-CommonList* g_commList;
-CommonList *timer_commList;
-
-bool manageFlag = true;
-string logstr = "./log/";
-pthread_t manage_t;
-ThreadPool pool("PollThreadPool");*/
-
 #include "pollServer.h"
 
 //打印PID
@@ -45,77 +13,67 @@ void print(const char* msg)
    printf("msg %s %s\n", Timestamp::now().toString().c_str(), msg);
 }
 
-//直播间轮询截图
-void pullflvTojpg(int type , const std::string& pullUrl , const std::string& liveid)
+//添加轮询任务
+void addPollEvent(int type, int intervalTime)
 {
-   printf("tid=%d  %s\n", muduo::CurrentThread::tid(), liveid.c_str());
-   
-   LOG(INFO) << "轮询类型  type:"<<type << "   tid: "<<muduo::CurrentThread::tid()<<"   liveID:"<<liveid;
-   //int resCode = flvToJpg(pullUrl.c_str(), liveid.c_str());
-   /*if(0 != resCode)
-   {
-       printf("保存转换图片失败  %s\n", liveid.c_str()); 
-	   LOG(ERROR) << "保存转换图片失败 liveID:"<<liveid;
-   }*/
+    POLLTYPE polltype = (POLLTYPE)type;
+
+    TimerParam  *timerparam = new TimerParam;
+    timerparam->type = (POLLTYPE)type;
+    timerparam->state = POLLSTATE::START;
+    timerparam->intervalTime = intervalTime;
+    timerparam->paramstr = "";
+
+    //开始轮询事件
+    TimerId fd = g_loop->runEvery(intervalTime,std::bind(handleEvent, timerparam));
+    timerparam->fd = fd;
+
+    //定时器对象入队列
+    timer_confList->pushList((void*)timerparam);
 }
 
-void handleData(int type , shared_ptr<void> vptr)
+//处理线程池事件
+void handleData(POLLTYPE type , shared_ptr<void> vptr)
 {
-    if(type == int(POLLTYPE::BROADCAST))
-    {
-        printf("POLLTYPE::BROADCAST\n");
-        shared_ptr<CommonList> list = static_pointer_cast<CommonList>(vptr);
-        list->display();
+    switch(type) {
+        case POLLTYPE::BROADCAST:
+             printf("直播状态正在轮询中...  \n");
+             shared_ptr <PollLiveState> livestate = static_pointer_cast<PollLiveState>(vptr);
+             livestate->pollState();
+             break;
+        case POLLTYPE::BROADCAST_ROOM:
+             printf("直播间状态正在轮询中...  \n");
+             shared_ptr <PollBroadcastRoom> broadcastState = static_pointer_cast<PollBroadcastRoom>(vptr);
+             broadcastState->pollBroadcast();
+             break;
+        default:
+             break;
     }
 }
 
-//处理定时器事件
+//处理轮询事件
 void handleEvent(TimerParam  *param)
 {
-    switch(param->type)
-    {
-       //直播状态
-       case POLLTYPE::BROADCAST:
-       {
-           printf("直播状态正在轮询中 %s\n", param->paramstr.c_str());
-    
-           shared_ptr<void> vptr = shared_ptr<CommonList>(new CommonList);
-           
-           pool.run(std::bind(handleData, int(param->type), vptr));       
-           break;
-       }
-       //课程状态
-       case POLLTYPE::COURSE:
-       {
-           printf("课程状态正在轮询中 %s\n", param->paramstr.c_str());
-           break;
-       }
-       //直播间状态
-       case POLLTYPE::BROADCAST_ROOM:
-       {
-           printf("直播间状态正在轮询中 %s\n", param->paramstr.c_str());
-           /*if(ThreadPoolFlag)
-           {
-               //muduo::ThreadPool pool("ChatRoomThreadPool");
-               pool.setMaxQueueSize(50);
-               pool.start(5);
-               ThreadPoolFlag = false;
-           }*/
-
-           for (int i = 0; i < 10; ++i)
-           {
-              char buf[32];
-              snprintf(buf, sizeof(buf), "livdID%d", i);
-              //pool.run(std::bind(printString, std::string(buf)));
-              pool.run(std::bind(pullflvTojpg, int(param->type), "rtmp://192.168.1.207/live/liveid666 live=1", std::string(buf)));
-           }
-           break;
-       }
-       default:
-         break;
+    switch(param->type) {
+        case POLLTYPE::BROADCAST: //轮询直播状态
+              printf("增加直播状态轮询任务  \n");
+              shared_ptr<void> vptr = shared_ptr<PollLiveState>(new PollLiveState);
+              //任务放入线程池
+              pool.run(std::bind(handleData, param->type, vptr));
+              break;
+        case POLLTYPE::COURSE:   //轮询课程状态
+              printf("增加课程状态正在轮询任务 \n");
+              break;
+        case POLLTYPE::BROADCAST_ROOM:  //轮询直播间状态
+              printf("增加直播间状态正在轮询任务 \n");
+              shared_ptr<void> vptr = shared_ptr<PollBroadcastRoom>(new PollBroadcastRoom);
+              //任务放入线程池
+              pool.run(std::bind(handleData, param->type, vptr));
+              break;
+        default:
+            break;
     }
 }
-
 
 //处理web接口参数
 void *manage_fun(void *data)
@@ -125,7 +83,7 @@ void *manage_fun(void *data)
        void  *parmdata = g_commList->popLockList(); 
        if(NULL != parmdata)
        {
-	    PollParam  *param = (PollParam*)parmdata;         
+	        PollParam  *param = (PollParam*)parmdata;
             printf("参数： %d  %d  %s\n",(int)param->type , (int)param->state , param->paramstr.c_str());
             
             LOG(INFO) << "web管理线程获取参数:"<<(int)param->type<<"  "<<(int)param->state<<"  "<<param->paramstr;
@@ -146,7 +104,7 @@ void *manage_fun(void *data)
 
                       //定时器事件对象入队列
                       timer_commList->pushList((void*)timerparam);					  
-                       LOG(INFO) << "增加轮询事件成功 type:"<<(int)param->type;
+                      LOG(INFO) << "增加轮询事件成功 type:"<<(int)param->type;
                  }else
                  {
                       printf("该事件已在轮询中\n");
@@ -166,7 +124,7 @@ void *manage_fun(void *data)
                       //定时器事件对象出队列
                       timer_commList->popList(timerParam);
 					  
-		     LOG(INFO) << "取消轮询事件成功 type:"<<(int)param->type;
+		              LOG(INFO) << "取消轮询事件成功 type:"<<(int)param->type;
                  }else
                  {
                       printf("未找到该定时器任务事件\n");
@@ -255,6 +213,12 @@ void StopServer(int sig)
       delete timer_commList;
       timer_commList = NULL;
     }
+
+    if(!timer_confList)
+    {
+        delete timer_confList;
+        timer_confList = NULL;
+    }
 }
 
 int main()
@@ -276,14 +240,13 @@ int main()
   string BroadcastTime = config_file.GetConfigName("BroadcastPollTime");
   StatePollTime =  std::stoi(StateTime);
   BroadcastPollTime = std::stoi(BroadcastTime);
-  //char* str_max_conn_cnt = config_file.GetConfigName("MaxConnCnt");
-  //char* str_aes_key = config_file.GetConfigName("aesKey");
-  //uint32_t db_server_count = 0;
-  //serv_info_t* db_server_list = read_server_config(&config_file, "DBServerIP", "DBServerPort", db_server_count);
+
+  //从配置文件中获取事件数组
+  int event_count = 0;
+  event_info_t* event_list = read_server_config(&config_file, "EventType", "EeventTime", event_count);
   
   printf("configInfo: %s %s %s %s %s %d %d\n", ServerIP.c_str(), ServerAllID.c_str(),SelectState.c_str(),
                  UpdataState.c_str(),PullUrl.c_str(),StatePollTime,BroadcastPollTime);
-    
 
   //停止服务信号
   signal(SIGINT, StopServer);
@@ -316,11 +279,21 @@ int main()
   if(NULL == timer_commList)
   {
      resCode = 2;
-     printf("resCode: %d errInfo:%s", resCode, "定时器事件队列初始化失败！");
+     printf("resCode: %d errInfo:%s", resCode, "web接口定时器事件队列初始化失败！");
 	 LOG(ERROR) << "定时器事件队列初始化失败 "<<" "<<"resCode:"<<resCode;
      return resCode;
   }
-  
+
+  //本地可配置事件队列
+  timer_confList = new CommonList(false);
+  if(NULL == timer_confList)
+  {
+        resCode = 2;
+        printf("resCode: %d errInfo:%s", resCode, "本地可配置事件队列初始化失败！");
+        LOG(ERROR) << "本地可配置队列初始化失败 "<<" "<<"resCode:"<<resCode;
+        return resCode;
+  }
+
   //启动线程池
   pool.setMaxQueueSize(1000);
   pool.start(10);
@@ -357,6 +330,17 @@ int main()
   LOG(INFO) << "已启动定时器服务";
   
   g_loop->runEvery(1, std::bind(print, "once1"));
+
+  //将配置文件中的事件加入到事件循环中
+  if(event_count > 0)
+  {
+      for(int i = 0; i < event_count;i++)
+      {
+          int type = event_list[i].eventType;
+          int time = event_list[i].intervalTime;
+          addPollEvent(type,time);
+      }
+  }
 
   //定时器服务开始轮询
   g_loop->loop();
