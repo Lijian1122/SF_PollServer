@@ -23,6 +23,7 @@ CMakeFiles/pollServer.dir/pollServer.cpp.o
  Base/json.hpp
  Base/ostype.h
  Business/PollBroadcastRoom.h
+ Business/PollLiveState.h
  Http/mongoose.h
  Http/webserver.h
  muduo/base/Atomic.h

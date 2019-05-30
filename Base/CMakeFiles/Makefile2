@@ -59,10 +59,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/PollServer/Base
+CMAKE_SOURCE_DIR = /home/SF_PollServer/Base
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/PollServer/Base
+CMAKE_BINARY_DIR = /home/SF_PollServer/Base
 
 #=============================================================================
 # Target rules for target CMakeFiles/base.dir
@@ -71,7 +71,7 @@ CMAKE_BINARY_DIR = /home/PollServer/Base
 CMakeFiles/base.dir/all:
 	$(MAKE) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/depend
 	$(MAKE) -f CMakeFiles/base.dir/build.make CMakeFiles/base.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/PollServer/Base/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target base"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/SF_PollServer/Base/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target base"
 .PHONY : CMakeFiles/base.dir/all
 
 # Include target in all.
@@ -81,9 +81,9 @@ all: CMakeFiles/base.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/base.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/PollServer/Base/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/SF_PollServer/Base/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/base.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/PollServer/Base/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/SF_PollServer/Base/CMakeFiles 0
 .PHONY : CMakeFiles/base.dir/rule
 
 # Convenience name for target.

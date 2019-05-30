@@ -210,9 +210,6 @@ LIB_MUDUOBASE:FILEPATH=/home/SF_PollServer/libs/libmuduo_base.a
 LIB_MUDUONET:FILEPATH=/home/SF_PollServer/libs/libmuduo_net.a
 
 //Path to a library.
-LIB_NET:FILEPATH=/home/SF_PollServer/libs/libmuduo_net.a
-
-//Path to a library.
 LIB_PATH:FILEPATH=/usr/lib64/libbase.a
 
 //Path to a library.

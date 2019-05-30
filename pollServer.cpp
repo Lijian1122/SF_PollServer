@@ -16,8 +16,6 @@ void print(const char* msg)
 //添加轮询任务
 void addPollEvent(int type, int intervalTime)
 {
-    POLLTYPE polltype = (POLLTYPE)type;
-
     TimerParam  *timerparam = new TimerParam;
     timerparam->type = (POLLTYPE)type;
     timerparam->state = POLLSTATE::START;
@@ -37,15 +35,23 @@ void handleData(POLLTYPE type , shared_ptr<void> vptr)
 {
     switch(type) {
         case POLLTYPE::BROADCAST:
+        {
              printf("直播状态正在轮询中...  \n");
              shared_ptr <PollLiveState> livestate = static_pointer_cast<PollLiveState>(vptr);
              livestate->pollState();
              break;
+        }
+        case POLLTYPE::COURSE:
+        {
+             break;
+        }
         case POLLTYPE::BROADCAST_ROOM:
+        {
              printf("直播间状态正在轮询中...  \n");
              shared_ptr <PollBroadcastRoom> broadcastState = static_pointer_cast<PollBroadcastRoom>(vptr);
              broadcastState->pollBroadcast();
              break;
+        }
         default:
              break;
     }
@@ -56,20 +62,26 @@ void handleEvent(TimerParam  *param)
 {
     switch(param->type) {
         case POLLTYPE::BROADCAST: //轮询直播状态
+        {
               printf("增加直播状态轮询任务  \n");
               shared_ptr<void> vptr = shared_ptr<PollLiveState>(new PollLiveState);
               //任务放入线程池
               pool.run(std::bind(handleData, param->type, vptr));
               break;
+        }
         case POLLTYPE::COURSE:   //轮询课程状态
+        {
               printf("增加课程状态正在轮询任务 \n");
               break;
+        }
         case POLLTYPE::BROADCAST_ROOM:  //轮询直播间状态
+        {
               printf("增加直播间状态正在轮询任务 \n");
               shared_ptr<void> vptr = shared_ptr<PollBroadcastRoom>(new PollBroadcastRoom);
               //任务放入线程池
               pool.run(std::bind(handleData, param->type, vptr));
               break;
+        }
         default:
             break;
     }
@@ -243,7 +255,7 @@ int main()
 
   //从配置文件中获取事件数组
   int event_count = 0;
-  event_info_t* event_list = read_server_config(&config_file, "EventType", "EeventTime", event_count);
+  event_info_t* event_list = read_event_config(&config_file, "EventType", "EeventTime", event_count);
   
   printf("configInfo: %s %s %s %s %s %d %d\n", ServerIP.c_str(), ServerAllID.c_str(),SelectState.c_str(),
                  UpdataState.c_str(),PullUrl.c_str(),StatePollTime,BroadcastPollTime);

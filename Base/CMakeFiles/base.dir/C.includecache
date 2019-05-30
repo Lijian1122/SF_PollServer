@@ -6,21 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/home/SF_PollServer/Base/MessageQueue.c
-MessageQueue.h
-/home/SF_PollServer/Base/MessageQueue.h
-
-/home/SF_PollServer/Base/MessageQueue.h
-string.h
--
-stdio.h
--
-sys/types.h
--
-unistd.h
--
-sys/ipc.h
--
-sys/msg.h
--
-

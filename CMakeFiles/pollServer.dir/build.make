@@ -85,9 +85,9 @@ pollServer: /usr/local/lib/libjpeg.a
 pollServer: /usr/lib64/libbase.a
 pollServer: libs/libmuduo_base.a
 pollServer: libs/libmuduo_net.a
-pollServer: libs/libmuduo_net.a
 pollServer: /usr/lib64/libbase.a
 pollServer: libs/libmuduo_base.a
+pollServer: libs/libmuduo_net.a
 pollServer: CMakeFiles/pollServer.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/SF_PollServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable pollServer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pollServer.dir/link.txt --verbose=$(VERBOSE)

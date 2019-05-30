@@ -7,34 +7,6 @@
 #IncludeRegexTransform: 
 
 /home/SF_PollServer/pollServer.cpp
-unistd.h
--
-assert.h
--
-signal.h
--
-string.h
--
-webserver.h
-/home/SF_PollServer/webserver.h
-EventLoop.h
-/home/SF_PollServer/EventLoop.h
-EventLoopThread.h
-/home/SF_PollServer/EventLoopThread.h
-Thread.h
-/home/SF_PollServer/Thread.h
-ThreadPool.h
-/home/SF_PollServer/ThreadPool.h
-Exception.h
-/home/SF_PollServer/Exception.h
-ConfigFileReader.h
-/home/SF_PollServer/ConfigFileReader.h
-PollBroadcastRoom.h
-/home/SF_PollServer/PollBroadcastRoom.h
-common.h
-/home/SF_PollServer/common.h
-BaseList.h
-/home/SF_PollServer/BaseList.h
 pollServer.h
 /home/SF_PollServer/pollServer.h
 
@@ -65,6 +37,8 @@ ConfigFileReader.h
 /home/SF_PollServer/ConfigFileReader.h
 PollBroadcastRoom.h
 /home/SF_PollServer/PollBroadcastRoom.h
+PollLiveState.h
+/home/SF_PollServer/PollLiveState.h
 common.h
 /home/SF_PollServer/common.h
 BaseList.h
@@ -631,6 +605,20 @@ jpeglib.h
 -
 jconfig.h
 -
+
+Business/PollLiveState.h
+stdio.h
+-
+string.h
+-
+string
+-
+sys/time.h
+-
+unistd.h
+-
+Base/base.h
+Business/Base/base.h
 
 Http/mongoose.h
 mg_locals.h

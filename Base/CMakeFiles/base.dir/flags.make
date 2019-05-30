@@ -9,7 +9,7 @@ C_DEFINES =
 
 C_INCLUDES = -I/home/SF_PollServer -I/home/SF_PollServer/muduo/base -I/home/SF_PollServer/muduo/net -I/home/SF_PollServer/Base -I/home/SF_PollServer/Http -I/home/SF_PollServer/Business -I/home/SF_PollServer/Base/curl -I/home/SF_PollServer/Base/.. -I/home/SF_PollServer/Base/../muduo -I/home/SF_PollServer/Base/../muduo/base -I/home/SF_PollServer/Base/../muduo/net 
 
-CXX_FLAGS =  -O0 -Wall -std=c++11  -fPIC  -Wno-deprecated  -Wno-write-strings -g -ggdb  
+CXX_FLAGS =  -O0 -Wall -std=c++11  -fPIC  -Wno-deprecated -Wunused-function  -Wno-write-strings -g -ggdb  
 
 CXX_DEFINES = 
 

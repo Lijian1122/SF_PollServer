@@ -7,7 +7,7 @@
 
 #include "ConfigFileReader.h"
 
-static event_info_t* read_event_config(CConfigFileReader* config_file, const char* type_format,
+event_info_t* read_event_config(CConfigFileReader* config_file, const char* type_format,
 								const char* time_format, int &event_count)
 {
 	char type_key[64] = {0};

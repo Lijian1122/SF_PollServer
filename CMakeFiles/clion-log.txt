@@ -1,4 +1,0 @@
-Cannot generate into D:\GitPrj\SF_PollServer
-It is already used for project \home\SF_PollServer
-
-Please either delete it manually or select another generation directory

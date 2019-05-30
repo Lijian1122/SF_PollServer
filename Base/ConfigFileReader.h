@@ -46,4 +46,6 @@ private:
     string m_config_file;
 };
 
+event_info_t* read_event_config(CConfigFileReader* config_file, const char* type_format,
+								const char* time_format, int &event_count);
 #endif /* CONFIGFILEREADER_H_ */

@@ -13,6 +13,9 @@ v 0.0.2
 1.优化轮询服务代码
 2.增加监控进程
 
+2019.05.30
+1.增加配置可灵活配置轮询事件模块
+2.优化轮询事件任务处理
 ******************************************************/
 
 #include <stdio.h>
@@ -52,3 +55,21 @@ bool manageFlag = true;
 string logstr = "./log/";
 pthread_t manage_t;
 ThreadPool pool("PollThreadPool");
+
+//停止运行服务
+void StopServer(int sig);
+
+//创建日志文件夹
+int CreateLogFileDir(const char *sPathName);
+
+//处理web接口参数
+void *manage_fun(void *data);
+
+//处理轮询事件
+void handleEvent(TimerParam  *param);
+
+//处理线程池事件
+void handleData(POLLTYPE type , shared_ptr<void> vptr);
+
+//添加轮询任务
+void addPollEvent(int type, int intervalTime);
