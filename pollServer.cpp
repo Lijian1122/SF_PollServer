@@ -14,7 +14,6 @@
 #include "common.h"
 #include "BaseList.h"
 
-
 using namespace muduo;
 using namespace muduo::net;
 using namespace std;
