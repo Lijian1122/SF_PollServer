@@ -1,0 +1,10 @@
+Log file created at: 2019/05/30 17:36:11
+Running on machine: live2.sanhai
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0530 17:36:11.230144 20122 pollServer.cpp:321] 已启动web参数管理线程
+I0530 17:36:11.232110 20122 pollServer.cpp:331] 已启动web服务
+I0530 17:36:11.232169 20122 pollServer.cpp:342] 已启动定时器服务
+I0530 17:36:11.232640 20134 webserver.cpp:190] 合成服务已启动 on port:8083
+I0530 17:36:41.270665 20122 pollServer.cpp:193] 已退出web服务
+I0530 17:36:42.000313 20122 pollServer.cpp:203] 已退出web参数管理线程
+I0530 17:36:42.001101 20122 pollServer.cpp:215] 已退出定时器服务停止
