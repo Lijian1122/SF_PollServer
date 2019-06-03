@@ -548,6 +548,10 @@ sys/ipc.h
 sys/msg.h
 -
 
+Base/Thread.h
+pthread.h
+-
+
 Base/base.h
 LibcurClient.h
 Base/LibcurClient.h

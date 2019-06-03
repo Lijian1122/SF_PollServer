@@ -13,16 +13,20 @@ PollBroadcastRoom::~PollBroadcastRoom()
 void PollBroadcastRoom::pollBroadcast()
 {
 	printf("直播状态正在轮询中8888...  \n");
+
+       std::string  url="rtmp://192.168.1.207/live/liveid123 live=1";
+       std::string livID = "live123";
+       flvToJpg(url.c_str() ,livID.c_str());
 }
 
 int PollBroadcastRoom::flvToJpg(const char *pullUrl , const char *liveId)
 {
-	int resCode = 0;
+    int resCode = 0;
     resCode = CreateFileDir(liveId);
 	
-	std::string folderName = FILEFOLDER;
+    std::string folderName = FILEFOLDER;
     folderName.append(liveId).append("/");
-	resCode = CreateFileDir(folderName.c_str());
+    resCode = CreateFileDir(folderName.c_str());
     if(0 != resCode)
     {
 	   printf("创建文件夹失败  直播ID:%s", liveId);

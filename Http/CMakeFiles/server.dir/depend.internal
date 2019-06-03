@@ -14,6 +14,7 @@ Http/CMakeFiles/server.dir/webserver.cpp.o
  Base/LibcurClient.h
  Base/Lock.h
  Base/MessageQueue.h
+ Base/Thread.h
  Base/base.h
  Base/common.h
  Base/curl/curl.h
