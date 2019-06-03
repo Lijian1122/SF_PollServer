@@ -148,9 +148,35 @@ Base/CMakeFiles/base.dir/MessageQueue.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/base.dir/MessageQueue.c.s"
 	cd /home/SF_PollServer/Base && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/SF_PollServer/Base/MessageQueue.c -o CMakeFiles/base.dir/MessageQueue.c.s
 
+Base/CMakeFiles/base.dir/Thread.cpp.o: Base/CMakeFiles/base.dir/flags.make
+Base/CMakeFiles/base.dir/Thread.cpp.o: Base/Thread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/SF_PollServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object Base/CMakeFiles/base.dir/Thread.cpp.o"
+	cd /home/SF_PollServer/Base && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/Thread.cpp.o -c /home/SF_PollServer/Base/Thread.cpp
+
+Base/CMakeFiles/base.dir/Thread.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/base.dir/Thread.cpp.i"
+	cd /home/SF_PollServer/Base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/SF_PollServer/Base/Thread.cpp > CMakeFiles/base.dir/Thread.cpp.i
+
+Base/CMakeFiles/base.dir/Thread.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/base.dir/Thread.cpp.s"
+	cd /home/SF_PollServer/Base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/SF_PollServer/Base/Thread.cpp -o CMakeFiles/base.dir/Thread.cpp.s
+
+Base/CMakeFiles/base.dir/ThreadPool.cpp.o: Base/CMakeFiles/base.dir/flags.make
+Base/CMakeFiles/base.dir/ThreadPool.cpp.o: Base/ThreadPool.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/SF_PollServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object Base/CMakeFiles/base.dir/ThreadPool.cpp.o"
+	cd /home/SF_PollServer/Base && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/ThreadPool.cpp.o -c /home/SF_PollServer/Base/ThreadPool.cpp
+
+Base/CMakeFiles/base.dir/ThreadPool.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/base.dir/ThreadPool.cpp.i"
+	cd /home/SF_PollServer/Base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/SF_PollServer/Base/ThreadPool.cpp > CMakeFiles/base.dir/ThreadPool.cpp.i
+
+Base/CMakeFiles/base.dir/ThreadPool.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/base.dir/ThreadPool.cpp.s"
+	cd /home/SF_PollServer/Base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/SF_PollServer/Base/ThreadPool.cpp -o CMakeFiles/base.dir/ThreadPool.cpp.s
+
 Base/CMakeFiles/base.dir/common.cpp.o: Base/CMakeFiles/base.dir/flags.make
 Base/CMakeFiles/base.dir/common.cpp.o: Base/common.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/SF_PollServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object Base/CMakeFiles/base.dir/common.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/SF_PollServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object Base/CMakeFiles/base.dir/common.cpp.o"
 	cd /home/SF_PollServer/Base && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/common.cpp.o -c /home/SF_PollServer/Base/common.cpp
 
 Base/CMakeFiles/base.dir/common.cpp.i: cmake_force
@@ -170,6 +196,8 @@ base_OBJECTS = \
 "CMakeFiles/base.dir/LibcurClient.cpp.o" \
 "CMakeFiles/base.dir/Lock.cpp.o" \
 "CMakeFiles/base.dir/MessageQueue.c.o" \
+"CMakeFiles/base.dir/Thread.cpp.o" \
+"CMakeFiles/base.dir/ThreadPool.cpp.o" \
 "CMakeFiles/base.dir/common.cpp.o"
 
 # External object files for target base
@@ -182,10 +210,12 @@ libs/libbase.a: Base/CMakeFiles/base.dir/ConfigFileReader.cpp.o
 libs/libbase.a: Base/CMakeFiles/base.dir/LibcurClient.cpp.o
 libs/libbase.a: Base/CMakeFiles/base.dir/Lock.cpp.o
 libs/libbase.a: Base/CMakeFiles/base.dir/MessageQueue.c.o
+libs/libbase.a: Base/CMakeFiles/base.dir/Thread.cpp.o
+libs/libbase.a: Base/CMakeFiles/base.dir/ThreadPool.cpp.o
 libs/libbase.a: Base/CMakeFiles/base.dir/common.cpp.o
 libs/libbase.a: Base/CMakeFiles/base.dir/build.make
 libs/libbase.a: Base/CMakeFiles/base.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/SF_PollServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library ../libs/libbase.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/SF_PollServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX static library ../libs/libbase.a"
 	cd /home/SF_PollServer/Base && $(CMAKE_COMMAND) -P CMakeFiles/base.dir/cmake_clean_target.cmake
 	cd /home/SF_PollServer/Base && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/base.dir/link.txt --verbose=$(VERBOSE)
 

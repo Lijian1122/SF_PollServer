@@ -2,7 +2,18 @@
 
 PollLiveState::PollLiveState()
 {
-	 m_httpclient = new LibcurClient;
+    m_httpclient = new LibcurClient;
+    printf("PollLiveState constructor...\n");
+}
+
+PollLiveState::~PollLiveState()
+{
+   if(NULL != m_httpclient)
+   {
+       delete m_httpclient;
+       m_httpclient = NULL;
+   }
+   printf("PollLiveState destructor...\n");
 }
 
 
@@ -10,7 +21,7 @@ PollLiveState::PollLiveState()
 void PollLiveState::pollState()
 {
         //string liveID = "100120190330P6jUPHIs";
-	    //int resCode = selectStateByliveID(liveID);
+	//int resCode = selectStateByliveID(liveID);
 	printf("直播状态正在轮询中6666...  \n");
 }
 
@@ -151,14 +162,6 @@ int PollLiveState::changeStateByliveID(string &liveID ,int Flag,  STATETYPE type
    return main_ret;
 }
 
-PollLiveState::~PollLiveState()
-{
-	if(NULL != m_httpclient)
-	{
-		delete m_httpclient;
-		m_httpclient = NULL;
-	}
-}
 
 
 

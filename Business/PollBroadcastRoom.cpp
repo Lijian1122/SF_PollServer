@@ -2,10 +2,12 @@
 
 PollBroadcastRoom::PollBroadcastRoom()
 {
+   printf("PollBroadcastRoom constructor...\n");
 }
 
 PollBroadcastRoom::~PollBroadcastRoom()
 {
+   printf("PollBroadcastRoom destructor...\n");
 }
 
 void PollBroadcastRoom::pollBroadcast()

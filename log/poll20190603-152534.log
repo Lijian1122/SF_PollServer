@@ -1,0 +1,7 @@
+Log file created at: 2019/06/03 15:25:34
+Running on machine: live2.sanhai
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0603 15:25:34.202123 24694 pollServer.cpp:321] 已启动web参数管理线程
+I0603 15:25:34.204059 24694 pollServer.cpp:331] 已启动web服务
+I0603 15:25:34.204102 24694 pollServer.cpp:342] 已启动定时器服务
+I0603 15:25:34.204183 24706 webserver.cpp:190] 合成服务已启动 on port:8083
