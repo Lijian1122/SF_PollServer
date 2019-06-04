@@ -559,6 +559,8 @@ MessageQueue.h
 Base/MessageQueue.h
 json.hpp
 Base/json.hpp
+glog/logging.h
+Base/glog/logging.h
 ConfigFileReader.h
 Base/ConfigFileReader.h
 

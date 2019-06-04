@@ -39,7 +39,7 @@ int PollBroadcastRoom::selectLiveInfoByID(std::string &liveID)
 
 	LOG(INFO) << "轮询直播间 查询直播状态 url："<<url  << "  liveID"<< liveID;
 	int main_ret = m_httpclient->HttpGetData(url.c_str());
-	string liveFlagStr;
+	string liveFlagStr,pullUrl;
 	if(0 == main_ret)
 	{
 		std::string resdata = m_httpclient->GetResdata();
@@ -52,8 +52,9 @@ int PollBroadcastRoom::selectLiveInfoByID(std::string &liveID)
 				int ret = atoi(resCode.c_str() );
 				if(0 == ret)
 				{
-					liveFlagStr = liveinfoObj.value("liveFlag", "oops");
-					pullUrl = liveinfoObj.value("pullUrl", "oops");
+                                        json liveObj = m_object.at("live_info");
+					liveFlagStr = liveObj.value("liveFlag", "oops");
+					pullUrl = liveObj.value("pullUrl", "oops");
 					//正在直播中
 					if(liveFlagStr == "1")
 					{
@@ -61,7 +62,7 @@ int PollBroadcastRoom::selectLiveInfoByID(std::string &liveID)
 						LOG(INFO) << "轮询直播间 检测到正在直播中开始进入直播间拉流  main_ret:"<<main_ret<<"  liveID"<< liveID;
 
 						//进入直播间开始拉流
-						flvToJpg(pullUrl ,livID);
+						flvToJpg(pullUrl ,liveID);
 					}
 				}
 			}
@@ -87,7 +88,7 @@ int PollBroadcastRoom::flvToJpg(std::string &pullUrl , std::string &liveId)
     resCode = CreateFileDir(folderName);
     if(0 != resCode)
     {
-	   printf("创建文件夹失败  直播ID:%s", liveId);
+	   printf("创建文件夹失败  直播ID:%s", liveId.c_str());
 	   LOG(ERROR) << "创建文件夹失败  liveId:"<<liveId;
        return resCode;   
     }
@@ -106,7 +107,7 @@ int PollBroadcastRoom::flvToJpg(std::string &pullUrl , std::string &liveId)
     resCode = reciveFlv(pullUrl,fileName,liveId);
 	if(0 != resCode)
     {
-	   printf("拉流失败  直播ID:%s", liveId);
+	   printf("拉流失败  直播ID:%s", liveId.c_str());
 	   LOG(ERROR) << "拉流生成flv失败  liveId:"<<liveId;
        return resCode;   
     }
@@ -114,7 +115,7 @@ int PollBroadcastRoom::flvToJpg(std::string &pullUrl , std::string &liveId)
     resCode = flvToPic(fileName, liveId);
     if(0 != resCode)
     {
-        printf("flv转换jpg失败  直播ID:%s", liveId);
+        printf("flv转换jpg失败  直播ID:%s", liveId.c_str());
         LOG(ERROR) << "flv转换jpg失败  liveId:"<<liveId;
         return resCode;
     }
@@ -149,7 +150,7 @@ int PollBroadcastRoom::CreateFileDir(std::string &filePath)
     return 0;  
 } 
 
-int PollBroadcastRoom::reciveFlv(std::string &pullUrl, std::string &fileName std::string &liveId)
+int PollBroadcastRoom::reciveFlv(std::string &pullUrl, std::string &fileName, std::string &liveId)
 {
 	int temp = 30;
 	AVOutputFormat *ofmt = NULL;
@@ -163,11 +164,11 @@ int PollBroadcastRoom::reciveFlv(std::string &pullUrl, std::string &fileName std
 	int frame_index = 0;
 
 	//设置拉流url
-    in_filename = pullUrl;
+        in_filename = pullUrl.c_str();
 
-    //设置输出文件名
+        //设置输出文件名
 	std::string flvName = FILEFOLDER;
-    flvName.append(".flv");
+        flvName.append(".flv");
 	out_filename = flvName.c_str();
 	
 	av_register_all();
@@ -313,7 +314,7 @@ int PollBroadcastRoom::flvToPic(std::string &fileName, std::string &liveId)
 	fileNameStr.append(".flv");
 	const char *filename = fileNameStr.c_str();
 
-    LOG(ERROR) << "开始解析FLV  Filename:":<<fileNameStr<<"    liveId:"<<liveId;
+        LOG(ERROR) << "开始解析FLV  Filename:"<<fileNameStr<<"    liveId:"<<liveId;
 	
 	bool picFlag = false;
 	AVFormatContext *pFormatCtx;
@@ -330,13 +331,13 @@ int PollBroadcastRoom::flvToPic(std::string &fileName, std::string &liveId)
 	av_register_all();
 	if (avformat_open_input(&pFormatCtx, filename, NULL, 0) != 0)//打开输入流，本质上是filename这个字符串来获取输入流的格式等信息。
     {
-        LOG(ERROR) << "开始解析FLV  打开输入流失败  Filename:":<<fileNameStr<<"    liveId:"<<liveId;
+        LOG(ERROR) << "开始解析FLV  打开输入流失败  Filename:"<<fileNameStr<<"    liveId:"<<liveId;
         return -1;
     }
 
 	if (avformat_find_stream_info(pFormatCtx, NULL) < 0)//获取输入流的信息。
     {
-        LOG(ERROR) << "开始解析FLV  获取输入流信息失败  Filename:":<<fileNameStr<<"    liveId:"<<liveId;
+        LOG(ERROR) << "开始解析FLV  获取输入流信息失败  Filename:"<<fileNameStr<<"    liveId:"<<liveId;
         return -2;
     }
 
@@ -354,14 +355,14 @@ int PollBroadcastRoom::flvToPic(std::string &fileName, std::string &liveId)
 	if (videoIndex == -1)
 	{
 		fprintf(stderr, "unsupport codec\n");
-        LOG(ERROR) << "开始解析FLV  unsupport codec 解码失败  Filename:":<<fileNameStr<<"    liveId:"<<liveId;
+        LOG(ERROR) << "开始解析FLV  unsupport codec 解码失败  Filename:"<<fileNameStr<<"    liveId:"<<liveId;
 		return -3;
 	}
 	pCodecCtx = pFormatCtx->streams[videoIndex]->codec;
 	pCodec = avcodec_find_decoder(pCodecCtx->codec_id);
 	if(avcodec_open2(pCodecCtx, pCodec, NULL) < 0)
     {
-        LOG(ERROR) << "开始解析FLV  avcodec_open2错误  Filename:":<<fileNameStr<<"    liveId:"<<liveId;
+        LOG(ERROR) << "开始解析FLV  avcodec_open2错误  Filename:"<<fileNameStr<<"    liveId:"<<liveId;
         return -4;
     }
 	AVFrame *pFrameRGB, *pFrame;
@@ -369,7 +370,7 @@ int PollBroadcastRoom::flvToPic(std::string &fileName, std::string &liveId)
 	pFrameRGB = av_frame_alloc();
 	if(pFrame == NULL)
     {
-        LOG(ERROR) << "开始解析FLV  av_frame_alloc为空  Filename:":<<fileNameStr<<"    liveId:"<<liveId;
+        LOG(ERROR) << "开始解析FLV  av_frame_alloc为空  Filename:"<<fileNameStr<<"    liveId:"<<liveId;
         return -5;
     }
 
@@ -393,11 +394,11 @@ int PollBroadcastRoom::flvToPic(std::string &fileName, std::string &liveId)
 			if (frameFinished)//够一帧的话就进行转码
 			{
 
-                LOG(ERROR) << "开始解析FLV 解析到一帧H264开始生成Jepg  Filename:":<<fileNameStr<<"    liveId:"<<liveId;
+                LOG(ERROR) << "开始解析FLV 解析到一帧H264开始生成Jepg  Filename:"<<fileNameStr<<"    liveId:"<<liveId;
 
 				sws_scale(img_convert_ctx, pFrame->data, pFrame->linesize, 0, pCodecCtx->height,
 					pFrameRGB->data, pFrameRGB->linesize);
-				saveH264ToJpeg(pFrameRGB, pCodecCtx->width, pCodecCtx->height, fileName);//保存图片
+				saveH264ToJpeg(pFrameRGB, pCodecCtx->width, pCodecCtx->height,fileName,liveId);//保存图片
 			}
 		}
 		picFlag = true;
@@ -409,7 +410,7 @@ int PollBroadcastRoom::flvToPic(std::string &fileName, std::string &liveId)
 	av_free(pFrame);
 	avcodec_close(pCodecCtx);
 
-    LOG(INFO) << "开始解析FLV  生成Jepg结束  Filename:":<<fileNameStr<<"    liveId:"<<liveId;
+    LOG(INFO) << "开始解析FLV  生成Jepg结束  Filename:"<<fileNameStr<<"    liveId:"<<liveId;
 
 	return 0;
 }
@@ -428,12 +429,12 @@ void PollBroadcastRoom::saveH264ToJpeg(AVFrame* pFrame, int width, int height, s
 	string fileNameStr = fileName;
 	fileNameStr.append(".jpg");
 
-    LOG(INFO) << "H264开始转化Jpeg Filename:":<<fileNameStr<<"    liveId:"<<liveID;
+    LOG(INFO) << "H264开始转化Jpeg Filename:"<<fileNameStr<<"    liveId:"<<liveID;
 
 	fp = fopen(fileNameStr.c_str(), "wb");
 	if(fp == NULL)
     {
-        LOG(ERROR) << "H264开始转化Jpeg 打开文件失败 Filename:":<<fileNameStr<<"    liveId:"<<liveID;
+        LOG(ERROR) << "H264开始转化Jpeg 打开文件失败 Filename:"<<fileNameStr<<"    liveId:"<<liveID;
         return;
     }
 
@@ -461,6 +462,6 @@ void PollBroadcastRoom::saveH264ToJpeg(AVFrame* pFrame, int width, int height, s
 	fclose(fp);
 	jpeg_destroy_compress(&cinfo);
 
-    LOG(INFO) << "H264开始转化Jpeg 完成转换 Filename:":<<fileNameStr<<"    liveId:"<<liveID;
+    LOG(INFO) << "H264开始转化Jpeg 完成转换 Filename:"<<fileNameStr<<"    liveId:"<<liveID;
 	return;
 }

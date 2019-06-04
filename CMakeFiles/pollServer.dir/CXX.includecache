@@ -133,6 +133,8 @@ MessageQueue.h
 Base/MessageQueue.h
 json.hpp
 Base/json.hpp
+glog/logging.h
+Base/glog/logging.h
 ConfigFileReader.h
 Base/ConfigFileReader.h
 
@@ -571,6 +573,8 @@ unistd.h
 -
 sys/stat.h
 -
+Base/base.h
+Business/Base/base.h
 libavcodec/avcodec.h
 Business/libavcodec/avcodec.h
 libavformat/avformat.h
