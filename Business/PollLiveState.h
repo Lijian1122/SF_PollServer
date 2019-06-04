@@ -6,6 +6,11 @@
 功能：询直播状态类，用来轮询直播，录制等状态
 
 v 0.0.1
+
+v 0.0.2
+ 1.增加日志
+ 2019.06.04
+ 1.优化代码
 ******************************************************/
 
 #include <stdio.h>
@@ -17,6 +22,8 @@ v 0.0.1
 
 using namespace std;
 using json = nlohmann::json;
+
+extern string  ServerIP,ServerAllID,SelectState,UpdataState,PullUrl;
 
 #ifndef   __POLLLIVESTATE_H_
 #define  __POLLLIVESTATE_H_
@@ -47,8 +54,8 @@ class PollLiveState
         //修改liveID状态
         int changeStateByliveID(string &liveID ,int Flag , STATETYPE type);		
 
-   private:
-      
+     private:
+
 	    LibcurClient *m_httpclient;
 };
 #endif

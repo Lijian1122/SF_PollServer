@@ -6,6 +6,11 @@
 功能：轮询直播间用ffmpeg拉流生成flv，再用解析生成h264,利用libjpeg库生成图片
 
 v 0.0.1
+
+ v 0.0.2
+ 1.增加日志
+ v 0.0.3
+ 1.优化代码，增加查询拉流url逻辑
 ******************************************************/
 
 #include <stdio.h>
@@ -22,6 +27,7 @@ v 0.0.1
 #ifndef  __POLLBROADCASTROOM_H
 #define  __POLLBROADCASTROOM_H
 
+#include "Base/base.h"
 #ifdef _WIN32
 //Windows
 extern "C"
@@ -56,6 +62,9 @@ extern "C"
 #endif
 
 using namespace std;
+using json = nlohmann::json;
+
+extern string ServerIP,ServerAllID,SelectState,UpdataState,PullUrl;
 
 class PollBroadcastRoom{
 	
@@ -66,21 +75,29 @@ class PollBroadcastRoom{
 	 //先查询轮询正在直播的直播，然后依次轮询每个直播间
 	 void pollBroadcast();
 
-	 //根据liveID拉流生成jpeg图片
-	 int flvToJpg(const char *pullUrl, const char *liveId);	
   private:
+
+     //根据liveID查询直播状态和拉流url
+     int selectLiveInfoByID(std::string &liveID);
+
+     //根据liveID拉流生成jpeg图片
+     int flvToJpg(std::string &pullUrl, std::string &liveID);
   
      //创建保存图片文件夹
-     int CreateFileDir(const char *sPathName);
+     int CreateFileDir(std::string &filePath);
   
      //拉流生成Flv
-     int reciveFlv(const char *pullUrl, const char *liveId);
+     int reciveFlv(std::string &pullUrl, std::string &fileName, std::string &liveID);
 	 
-	 //解析flv生成Jpeg图片
-     int flvToPic(const char *fileName);
+	 //解析flv生成一帧H264
+     int flvToPic(std::string &fileName,std::string &liveID);
 	 
-	 //解析一帧H264生成Jpeg图片
-	 void saveH264ToJpeg(AVFrame* pFrame, int width, int height, const char *livId);
+	 //解析一帧H264生成Jpeg图
+	 void saveH264ToJpeg(AVFrame* pFrame, int width, int height, std::string &fileName,std::string &liveID);
+
+  private:
+
+    LibcurClient *m_httpclient;
 };
 #endif
 
